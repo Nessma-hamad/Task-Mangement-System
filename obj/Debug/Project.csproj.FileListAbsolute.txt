@@ -32,3 +32,6 @@ F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.pdb
 F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.categoryList.resources
 F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\project.createTeamForm.resources
 F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\project.AddUserForm.resources
+E:\ITI\C#\New\bin\Debug\Project.exe.config
+E:\ITI\C#\New\obj\Debug\Project.exe
+E:\ITI\C#\New\obj\Debug\Project.pdb
