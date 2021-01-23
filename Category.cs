@@ -13,6 +13,7 @@ namespace Project
         public Category(String name)
         {
             Name = name;
+            //ddddd
             
         }
         public override string ToString()
