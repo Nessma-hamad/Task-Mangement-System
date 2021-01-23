@@ -66,12 +66,6 @@
     <Compile Include="CategoryForm.designer.cs">
       <DependentUpon>CategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="categoryList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="categoryList.Designer.cs">
-      <DependentUpon>categoryList.cs</DependentUpon>
-    </Compile>
     <Compile Include="circleButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -104,6 +98,12 @@
     <Compile Include="AddUserForm.designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeamUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TeamUser.Designer.cs">
+      <DependentUpon>TeamUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="View_Task.cs">
       <SubType>Form</SubType>
@@ -119,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryForm.resx">
       <DependentUpon>CategoryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="categoryList.resx">
-      <DependentUpon>categoryList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teamform.resx">
       <DependentUpon>Teamform.cs</DependentUpon>
@@ -143,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamUser.resx">
+      <DependentUpon>TeamUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View_Task.resx">
       <DependentUpon>View_Task.cs</DependentUpon>
