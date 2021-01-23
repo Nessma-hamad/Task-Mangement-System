@@ -35,3 +35,6 @@ F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\project.AddUse
 E:\ITI\C#\New\bin\Debug\Project.exe.config
 E:\ITI\C#\New\obj\Debug\Project.exe
 E:\ITI\C#\New\obj\Debug\Project.pdb
+C:\Users\Microsoft\Source\Repos\Task-Mangement-System-forms9\bin\Debug\Project.exe.config
+C:\Users\Microsoft\Source\Repos\Task-Mangement-System-forms9\obj\Debug\Project.exe
+C:\Users\Microsoft\Source\Repos\Task-Mangement-System-forms9\obj\Debug\Project.pdb
