@@ -19,8 +19,20 @@ namespace Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ////////dddddddd
-
+            int loc = 20;
+            foreach (var item in SampleData.Teams)
+            {
+                Button b = new Button() { Text = item.Name, Location = new Point(loc, 50), Size = new Size(100, 100) };
+                b.Click += new EventHandler(ShowTeam);
+                this.Team_Tab.Controls.Add(b);
+                loc += 100;
+            }
+        }
+        public void ShowTeam(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            Teamform tf = new Teamform(b.Text);
+            tf.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)

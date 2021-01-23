@@ -38,22 +38,23 @@ namespace Project
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cName = new System.Windows.Forms.Label();
+            this.categoryList = new System.Windows.Forms.ComboBox();
             this.AddTaskBtn = new System.Windows.Forms.Button();
             this.openAdditionformCategory = new System.Windows.Forms.Button();
             this.MembersTab = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AddMemberBtn = new System.Windows.Forms.Button();
             this.ArchiveTab = new System.Windows.Forms.TabPage();
-            this.categoryList = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cName = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.DescriptionTeam = new System.Windows.Forms.Label();
             this.TeamTabs.SuspendLayout();
             this.CategoryTab.SuspendLayout();
             this.CategoriesPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            this.MembersTab.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.MembersTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // TeamformClose
@@ -74,7 +75,7 @@ namespace Project
             // 
             this.TeamName.AutoSize = true;
             this.TeamName.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TeamName.Location = new System.Drawing.Point(27, 42);
+            this.TeamName.Location = new System.Drawing.Point(28, 29);
             this.TeamName.Name = "TeamName";
             this.TeamName.Size = new System.Drawing.Size(170, 33);
             this.TeamName.TabIndex = 1;
@@ -144,6 +145,46 @@ namespace Project
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.removeToolStripMenuItem.Text = "Remove";
+            // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 30;
+            this.listBox1.Location = new System.Drawing.Point(583, 81);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(243, 184);
+            this.listBox1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.panel2.Controls.Add(this.cName);
+            this.panel2.Location = new System.Drawing.Point(583, 35);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(243, 49);
+            this.panel2.TabIndex = 1;
+            // 
+            // cName
+            // 
+            this.cName.AutoSize = true;
+            this.cName.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cName.ForeColor = System.Drawing.Color.White;
+            this.cName.Location = new System.Drawing.Point(38, 8);
+            this.cName.Name = "cName";
+            this.cName.Size = new System.Drawing.Size(74, 24);
+            this.cName.TabIndex = 0;
+            this.cName.Text = "label1";
+            // 
+            // categoryList
+            // 
+            this.categoryList.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryList.FormattingEnabled = true;
+            this.categoryList.Location = new System.Drawing.Point(65, 35);
+            this.categoryList.Name = "categoryList";
+            this.categoryList.Size = new System.Drawing.Size(206, 32);
+            this.categoryList.TabIndex = 0;
+            this.categoryList.Text = "Categories List";
             // 
             // AddTaskBtn
             // 
@@ -226,45 +267,14 @@ namespace Project
             this.ArchiveTab.Text = "Archive";
             this.ArchiveTab.UseVisualStyleBackColor = true;
             // 
-            // categoryList
+            // DescriptionTeam
             // 
-            this.categoryList.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryList.FormattingEnabled = true;
-            this.categoryList.Location = new System.Drawing.Point(65, 35);
-            this.categoryList.Name = "categoryList";
-            this.categoryList.Size = new System.Drawing.Size(206, 32);
-            this.categoryList.TabIndex = 0;
-            this.categoryList.Text = "Categories List";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.panel2.Controls.Add(this.cName);
-            this.panel2.Location = new System.Drawing.Point(583, 35);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(243, 49);
-            this.panel2.TabIndex = 1;
-            // 
-            // cName
-            // 
-            this.cName.AutoSize = true;
-            this.cName.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cName.ForeColor = System.Drawing.Color.White;
-            this.cName.Location = new System.Drawing.Point(38, 8);
-            this.cName.Name = "cName";
-            this.cName.Size = new System.Drawing.Size(74, 24);
-            this.cName.TabIndex = 0;
-            this.cName.Text = "label1";
-            // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 30;
-            this.listBox1.Location = new System.Drawing.Point(583, 81);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(243, 184);
-            this.listBox1.TabIndex = 2;
+            this.DescriptionTeam.AutoSize = true;
+            this.DescriptionTeam.Location = new System.Drawing.Point(137, 80);
+            this.DescriptionTeam.Name = "DescriptionTeam";
+            this.DescriptionTeam.Size = new System.Drawing.Size(51, 20);
+            this.DescriptionTeam.TabIndex = 3;
+            this.DescriptionTeam.Text = "label1";
             // 
             // Teamform
             // 
@@ -273,6 +283,7 @@ namespace Project
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(902, 570);
             this.ControlBox = false;
+            this.Controls.Add(this.DescriptionTeam);
             this.Controls.Add(this.TeamTabs);
             this.Controls.Add(this.TeamName);
             this.Controls.Add(this.TeamformClose);
@@ -282,13 +293,14 @@ namespace Project
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Teamform";
+            this.Load += new System.EventHandler(this.Teamform_Load);
             this.TeamTabs.ResumeLayout(false);
             this.CategoryTab.ResumeLayout(false);
             this.CategoriesPanel.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
-            this.MembersTab.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.MembersTab.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,6 +326,7 @@ namespace Project
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label cName;
+        private System.Windows.Forms.Label DescriptionTeam;
     }
 }
 

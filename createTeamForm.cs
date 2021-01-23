@@ -39,7 +39,7 @@ namespace Project
 
         private void Addteambtn_Click(object sender, EventArgs e)
         {
-            Project.Teamform teamform = new Project.Teamform();
+            Teamform teamform = new Teamform(this.NameTeam_txtbox.Text);
             teamform.Show();
         }
     }

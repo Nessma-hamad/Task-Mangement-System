@@ -12,11 +12,20 @@ namespace Project
 {
     public partial class Teamform : Form
     {
-        public Teamform()
+        public Teamform(string TName)
         {
             InitializeComponent();
+            TeamName.Text = TName;
             CategoryForm.newCtegory += AddCategory;
-            Team t = new Team();
+            
+        }
+        private void fillListOfTask(IEnumerable<Task> Tasks)
+        {
+            listBox1.Items.Clear();
+            foreach (Task task in Tasks)
+            {
+                listBox1.Items.Add(task.Name);
+            }
         }
         private void TeamformClose_Click(object sender, EventArgs e)
         {
@@ -42,8 +51,39 @@ namespace Project
         }
         public void AddCategory(string name)
         {
-            
+            Team t = new Team(this.TeamName.Text, this.DescriptionTeam.Text);
+            t.categories.Add(new Category(name));
             this.categoryList.Items.Add(name);
+        }
+
+        private void Teamform_Load(object sender, EventArgs e)
+        {
+            foreach (var item in SampleData.Teams)
+            {
+                if (item.Name == TeamName.Text)
+                {
+                    foreach (Category i in item.categories)
+                    {
+                        /*categoryList.DataSource = null;
+                        categoryList.DisplayMember = nameof(i.Name);//"Name";
+                        categoryList.ValueMember = "category";  //"ID";
+                        categoryList.DataSource = item.categories;*/
+                        categoryList.Items.Add(i.Name);
+                    }
+                }
+
+            }
+        }
+        private void categoryList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (categoryList.SelectedIndex == -1)
+            {
+                cName.Text = string.Empty;
+                return;
+            }
+            cName.Text = categoryList.SelectedItem.ToString();
+            /* Category category = (Category)categoryList.SelectedItem;
+             fillListOfTask(category.Tasks);*/
         }
     }
 }
