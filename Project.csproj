@@ -70,6 +70,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Comment.cs" />
+    <Compile Include="SampleData.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="Team.cs" />
     <Compile Include="Teamform.cs">
