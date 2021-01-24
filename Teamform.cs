@@ -40,7 +40,7 @@ namespace Project
 
         private void AddTaskBtn_Click(object sender, EventArgs e)
         {
-            AddTask addtask = new AddTask();
+            AddTask addtask = new AddTask(TeamName.Text.ToString());
             addtask.Show();
         }
 

@@ -12,9 +12,10 @@ namespace Project
 {
     public partial class AddTask : Form
     {
-        public AddTask()
+        public AddTask(string teamname)
         {
             InitializeComponent();
+
         }
 
         private void AddTask_Load(object sender, EventArgs e)
@@ -23,6 +24,11 @@ namespace Project
         }
 
         private void Create_task_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

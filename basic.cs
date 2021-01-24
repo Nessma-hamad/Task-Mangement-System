@@ -31,8 +31,8 @@ namespace Project
         public void ShowTeam(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            Teamform tf = new Teamform(btn.Text);
-            tf.Show();
+            Teamform teamform = new Teamform(btn.Text);
+            teamform.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
