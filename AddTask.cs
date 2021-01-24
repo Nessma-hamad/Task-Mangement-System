@@ -35,11 +35,21 @@ namespace Project
             foreach(User user in Currentteam.users)
             {
                 currentteam_users.Items.Add(user.Name);
+                
             }
 
+            foreach (Category category in Currentteam.categories)
+            {
+                Task_Category.Items.Add(category.Name);
+
+            }
+
+            
             Task_Pirority.Items.Add(Pirority.high);
             Task_Pirority.Items.Add(Pirority.meduim);
             Task_Pirority.Items.Add(Pirority.low);
+
+
 
         }
 
