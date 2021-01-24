@@ -21,10 +21,13 @@ namespace Project
         public bool IsDone { get; set; }
         public Pirority pirority { get; set; }
 
+        public List<User> Team_Users = new List<User>();
+        Category Task_Catergory ;
+
         public List<Comment> Comments= new List<Comment>();
-       public Task()
+       public Task(string CategoryName)
         {
-            
+            Task_Catergory = new Category(CategoryName);
         }
         public override string ToString()
         {

@@ -21,13 +21,13 @@ namespace Project
                 {
                     Tasks=new List<Task>
                     {
-                        new Task
+                        new Task("Design")
                         {
                             Name="login Interface",
                             pirority=Pirority.high,
                             IsDone=false
                         },
-                        new Task
+                        new Task("Design")
                         {
                             Name="signup Interface",
                             pirority=Pirority.meduim,
@@ -40,13 +40,13 @@ namespace Project
                 {
                     Tasks=new List<Task>
                     {
-                        new Task
+                        new Task("Design")
                         {
                             Name="login",
                             pirority=Pirority.high,
                             IsDone=false
                         },
-                        new Task
+                        new Task("Design")
                         {
                             Name="signup",
                             pirority=Pirority.meduim,
@@ -68,13 +68,13 @@ namespace Project
                 {
                     Tasks=new List<Task>
                     {
-                        new Task
+                        new Task("Design")
                         {
                             Name="Erd Design",
                             pirority=Pirority.high,
                             IsDone=false
                         },
-                        new Task
+                        new Task("Design")
                         {
                             Name="Mapping Design",
                             pirority=Pirority.meduim,

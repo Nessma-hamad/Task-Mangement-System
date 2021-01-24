@@ -147,6 +147,7 @@
             // 
             this.currentteam_users.FormattingEnabled = true;
             this.currentteam_users.Location = new System.Drawing.Point(385, 145);
+            this.currentteam_users.MultiColumn = true;
             this.currentteam_users.Name = "currentteam_users";
             this.currentteam_users.Size = new System.Drawing.Size(271, 147);
             this.currentteam_users.TabIndex = 11;

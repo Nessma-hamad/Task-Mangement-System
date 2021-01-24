@@ -15,6 +15,7 @@ namespace Project
         public List<User> users = new List<User>();
 
         public List<Category> categories = new List<Category>();
+        public List<Task> TeamTasks = new List<Task>();
 
         public Archive archive = new Archive();
 

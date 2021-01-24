@@ -13,6 +13,19 @@ namespace Project
     public partial class AddTask : Form
     {
         string currentteam_name = string.Empty;
+        static Team GetCurrentTeam(string name)
+        {
+            Team Currentteam = new Team();
+            foreach (Team team in SampleData.Teams)
+            {
+                if (team.Name == name)
+                {
+                    Currentteam = team;
+                }
+            }
+            return Currentteam;
+
+        }
         public AddTask(string teamname)
         {
             InitializeComponent();
@@ -22,15 +35,8 @@ namespace Project
 
         private void AddTask_Load(object sender, EventArgs e)
         {
-            
-            Team Currentteam = new Team();
-            foreach(Team team in SampleData.Teams)
-            {
-                if(team.Name ==currentteam_name )
-                {
-                    Currentteam = team;
-                }
-            }
+
+            Team Currentteam = GetCurrentTeam(currentteam_name);
 
             foreach(User user in Currentteam.users)
             {
@@ -55,7 +61,31 @@ namespace Project
 
         private void Create_task_Click(object sender, EventArgs e)
         {
+            String TaskCategory =Task_Category.SelectedItem.ToString();
 
+            Task NewTask = new Task(TaskCategory);
+
+            NewTask.Name= Task_Name.Text;
+            NewTask.DateLine=Task_Dateline.Value;
+            NewTask.pirority = (Pirority)Task_Pirority.SelectedItem;
+            
+            
+           
+            foreach(User user in currentteam_users.SelectedItems)
+            {
+                NewTask.Team_Users.Add(user);
+
+            }
+
+            Team Currentteam = GetCurrentTeam(currentteam_name);
+            Currentteam.TeamTasks.Add(NewTask);
+            foreach(Category category in Currentteam.categories)
+            {
+                if(category.Name== TaskCategory)
+                {
+                    category.Tasks.Add(NewTask);
+                }
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
