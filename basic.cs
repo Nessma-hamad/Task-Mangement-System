@@ -22,16 +22,16 @@ namespace Project
             int loc = 20;
             foreach (var item in SampleData.Teams)
             {
-                Button b = new Button() { Text = item.Name, Location = new Point(loc, 50), Size = new Size(100, 100) };
-                b.Click += new EventHandler(ShowTeam);
-                this.Team_Tab.Controls.Add(b);
+                Button btn = new Button() { Text = item.Name, Location = new Point(loc, 50), Size = new Size(100, 100) };
+                btn.Click += new EventHandler(ShowTeam);
+                this.Team_Tab.Controls.Add(btn);
                 loc += 100;
             }
         }
         public void ShowTeam(object sender, EventArgs e)
         {
-            Button b = (Button)sender;
-            Teamform tf = new Teamform(b.Text);
+            Button btn = (Button)sender;
+            Teamform tf = new Teamform(btn.Text);
             tf.Show();
         }
 
@@ -52,14 +52,14 @@ namespace Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            createTeamForm T = new createTeamForm();
-            T.Show();
+            createTeamForm createteam = new createTeamForm();
+            createteam.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AddUserForm U = new AddUserForm();
-            U.Show();
+            AddUserForm adduser = new AddUserForm();
+            adduser.Show();
         }
     }
 }

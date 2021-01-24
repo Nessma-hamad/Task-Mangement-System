@@ -131,6 +131,7 @@
             this.Create_task.TabIndex = 9;
             this.Create_task.Text = "Create";
             this.Create_task.UseVisualStyleBackColor = true;
+            this.Create_task.Click += new System.EventHandler(this.Create_task_Click);
             // 
             // label6
             // 

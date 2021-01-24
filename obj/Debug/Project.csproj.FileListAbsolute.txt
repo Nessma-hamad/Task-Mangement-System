@@ -1,55 +1,17 @@
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\bin\Debug\Project.exe.config
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\bin\Debug\Project.exe
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\bin\Debug\Project.pdb
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\Project.AddTask.resources
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\Project.Properties.Resources.resources
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\Project.csproj.GenerateResource.Cache
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\Project.exe
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\Project.pdb
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\Project.View_Task.resources
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\project.basic.resources
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\Project.CategoryForm.resources
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\Project.Teamform.resources
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\Project.Invite_Member.resources
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\project.Team.resources
-E:\ITI\C#\Ass\Day1\New folder\Task Mangement System _ Forms\Project\obj\Debug\project.User.resources
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\bin\Debug\Project.exe.config
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\bin\Debug\Project.exe
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\bin\Debug\Project.pdb
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.csprojAssemblyReference.cache
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.AddTask.resources
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\project.basic.resources
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.CategoryForm.resources
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.Teamform.resources
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.Invite_Member.resources
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.Properties.Resources.resources
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.View_Task.resources
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.csproj.GenerateResource.cache
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.exe
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.pdb
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\Project.categoryList.resources
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\project.createTeamForm.resources
-F:\ITI_Courses\C#\Task Mangement System _ Forms\Project\obj\Debug\project.AddUserForm.resources
-E:\ITI\C#\New\bin\Debug\Project.exe.config
-E:\ITI\C#\New\obj\Debug\Project.exe
-E:\ITI\C#\New\obj\Debug\Project.pdb
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\bin\Debug\Project.exe.config
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\bin\Debug\Project.exe
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\bin\Debug\Project.pdb
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.csprojAssemblyReference.cache
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.AddTask.resources
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.basic.resources
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.CategoryForm.resources
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.Teamform.resources
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.Invite_Member.resources
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.Properties.Resources.resources
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.createTeamForm.resources
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.AddUserForm.resources
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.TeamUser.resources
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.View_Task.resources
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.csproj.GenerateResource.cache
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.csproj.CoreCompileInputs.cache
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.exe
-C:\Users\emabd\Source\Repos\Task-Mangement-System-forms\obj\Debug\Project.pdb
+E:\ITI\C#\Project\bin\Debug\Project.exe.config
+E:\ITI\C#\Project\obj\Debug\Project.exe
+E:\ITI\C#\Project\obj\Debug\Project.pdb
+E:\ITI\C#\Project\bin\Debug\Project.exe
+E:\ITI\C#\Project\bin\Debug\Project.pdb
+E:\ITI\C#\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+E:\ITI\C#\Project\obj\Debug\Project.AddTask.resources
+E:\ITI\C#\Project\obj\Debug\Project.basic.resources
+E:\ITI\C#\Project\obj\Debug\Project.CategoryForm.resources
+E:\ITI\C#\Project\obj\Debug\Project.Teamform.resources
+E:\ITI\C#\Project\obj\Debug\Project.Invite_Member.resources
+E:\ITI\C#\Project\obj\Debug\Project.Properties.Resources.resources
+E:\ITI\C#\Project\obj\Debug\Project.createTeamForm.resources
+E:\ITI\C#\Project\obj\Debug\Project.AddUserForm.resources
+E:\ITI\C#\Project\obj\Debug\Project.TeamUser.resources
+E:\ITI\C#\Project\obj\Debug\Project.View_Task.resources
+E:\ITI\C#\Project\obj\Debug\Project.csproj.GenerateResource.Cache
