@@ -37,6 +37,10 @@ namespace Project
                 currentteam_users.Items.Add(user.Name);
             }
 
+            Task_Pirority.Items.Add(Pirority.high);
+            Task_Pirority.Items.Add(Pirority.meduim);
+            Task_Pirority.Items.Add(Pirority.low);
+
         }
 
         private void Create_task_Click(object sender, EventArgs e)
