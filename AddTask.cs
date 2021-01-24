@@ -12,14 +12,30 @@ namespace Project
 {
     public partial class AddTask : Form
     {
+        string currentteam_name = string.Empty;
         public AddTask(string teamname)
         {
             InitializeComponent();
+            currentteam_name = teamname;
 
         }
 
         private void AddTask_Load(object sender, EventArgs e)
         {
+            
+            Team Currentteam = new Team();
+            foreach(Team team in SampleData.Teams)
+            {
+                if(team.Name ==currentteam_name )
+                {
+                    Currentteam = team;
+                }
+            }
+
+            foreach(User user in Currentteam.users)
+            {
+                currentteam_users.Items.Add(user.Name);
+            }
 
         }
 

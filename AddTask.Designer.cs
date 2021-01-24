@@ -39,7 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Create_task = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.currentteam_users = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -143,21 +143,21 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Assign Users  :";
             // 
-            // listBox1
+            // currentteam_users
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(385, 145);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(271, 147);
-            this.listBox1.TabIndex = 11;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.currentteam_users.FormattingEnabled = true;
+            this.currentteam_users.Location = new System.Drawing.Point(385, 145);
+            this.currentteam_users.Name = "currentteam_users";
+            this.currentteam_users.Size = new System.Drawing.Size(271, 147);
+            this.currentteam_users.TabIndex = 11;
+            this.currentteam_users.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // AddTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 458);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.currentteam_users);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Create_task);
             this.Controls.Add(this.Task_Category);
@@ -190,7 +190,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Create_task;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox currentteam_users;
     }
 }
 
