@@ -12,6 +12,12 @@ namespace Project
 {
     public partial class basic : Form
     {
+        List<User> Users = new List<User>
+        {
+             new User{ID=1,Name="Eman",Email="Eman@yahoo.com"},
+             new User{ID=2,Name="Saffa",Email="Saffa@yahoo.com"},
+             new User{ID=3, Name="Nessama",Email="Nessma@yahoo.com"}
+        };
         public basic()
         {
             InitializeComponent();
@@ -19,6 +25,10 @@ namespace Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            foreach(User user in Users)
+            {
+                system_users.Items.Add(user.Name);
+            }
             int loc = 20;
             foreach (var item in SampleData.Teams)
             {
