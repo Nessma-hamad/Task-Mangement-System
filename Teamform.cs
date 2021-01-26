@@ -92,15 +92,14 @@ namespace Project
                 {
                     foreach (Category i in item.categories)
                     {
-                        /*categoryList.DataSource = null;
-                        categoryList.DisplayMember = nameof(i.Name);//"Name";
-                        categoryList.ValueMember = "category";  //"ID";
-                        categoryList.DataSource = item.categories;*/
-                        categoryList.Items.Add(i.Name);
+                        categoryList.DataSource = null;
+                        categoryList.DisplayMember = nameof(i.Name);
+                        categoryList.DataSource = item.categories;
                     }
                 }
 
             }
+            DisplayTeamUsers();
         }
         private void categoryList_SelectedIndexChanged(object sender, EventArgs e)
         {
