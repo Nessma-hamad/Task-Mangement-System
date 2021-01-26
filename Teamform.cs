@@ -40,6 +40,16 @@ namespace Project
                 listBox1.Items.Add(task.Name);
             }
         }
+        private void DisplayTeamUsers()
+        {
+            int y = 0;
+            Team team = GetCurrentTeam(TeamName.Text);
+            foreach (User u in team.users)
+            {
+                MemberTab_panel.Controls.Add(new TeamUser() { UserName = u.Name, Email = u.Email, Location = new Point(0, y), Size = new Size(400, 50) });
+                y += 60;
+            }
+        }
         private void TeamformClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -97,6 +107,11 @@ namespace Project
             cName.Text = categoryList.SelectedItem.ToString();
             /* Category category = (Category)categoryList.SelectedItem;
              fillListOfTask(category.Tasks);*/
+        }
+
+        private void MembersTab_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -45,7 +45,7 @@ namespace Project
             this.AddTaskBtn = new System.Windows.Forms.Button();
             this.openAdditionformCategory = new System.Windows.Forms.Button();
             this.MembersTab = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.MemberTab_panel = new System.Windows.Forms.Panel();
             this.AddMemberBtn = new System.Windows.Forms.Button();
             this.ArchiveTab = new System.Windows.Forms.TabPage();
             this.DescriptionTeam = new System.Windows.Forms.Label();
@@ -221,7 +221,7 @@ namespace Project
             // 
             // MembersTab
             // 
-            this.MembersTab.Controls.Add(this.panel1);
+            this.MembersTab.Controls.Add(this.MemberTab_panel);
             this.MembersTab.Controls.Add(this.AddMemberBtn);
             this.MembersTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MembersTab.Location = new System.Drawing.Point(4, 64);
@@ -232,13 +232,14 @@ namespace Project
             this.MembersTab.TabIndex = 1;
             this.MembersTab.Text = "Members";
             this.MembersTab.UseVisualStyleBackColor = true;
+            this.MembersTab.Click += new System.EventHandler(this.MembersTab_Click);
             // 
-            // panel1
+            // MemberTab_panel
             // 
-            this.panel1.Location = new System.Drawing.Point(7, 14);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(859, 299);
-            this.panel1.TabIndex = 1;
+            this.MemberTab_panel.Location = new System.Drawing.Point(7, 14);
+            this.MemberTab_panel.Name = "MemberTab_panel";
+            this.MemberTab_panel.Size = new System.Drawing.Size(859, 299);
+            this.MemberTab_panel.TabIndex = 1;
             // 
             // AddMemberBtn
             // 
@@ -318,7 +319,7 @@ namespace Project
         private System.Windows.Forms.Button AddMemberBtn;
         private System.Windows.Forms.TabPage ArchiveTab;
         private System.Windows.Forms.Panel CategoriesPanel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel MemberTab_panel;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
