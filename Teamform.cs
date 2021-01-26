@@ -108,9 +108,9 @@ namespace Project
                 cName.Text = string.Empty;
                 return;
             }
+            Category category = (Category)categoryList.SelectedItem;
             cName.Text = categoryList.SelectedItem.ToString();
-            /* Category category = (Category)categoryList.SelectedItem;
-             fillListOfTask(category.Tasks);*/
+            fillListOfTask(category.Tasks);
         }
 
         private void MembersTab_Click(object sender, EventArgs e)
