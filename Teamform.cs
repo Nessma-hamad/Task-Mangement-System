@@ -46,7 +46,7 @@ namespace Project
             Team team = GetCurrentTeam(TeamName.Text);
             foreach (User u in team.users)
             {
-                MemberTab_panel.Controls.Add(new TeamUser() { UserName = u.Name, Email = u.Email, Location = new Point(0, y), Size = new Size(400, 50) });
+                MemberTab_panel.Controls.Add(new TeamUser() { UserName = u.Name, Email = u.Email, Location = new Point(0, y), Size = new Size(440, 50) });
                 y += 60;
             }
         }
