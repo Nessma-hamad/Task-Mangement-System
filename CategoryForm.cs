@@ -33,6 +33,8 @@ namespace Project
             {
                 MessageBox.Show("category name empty!!please enter category name first");
             }
+            CatgoryNameInput.Text = "";
+            this.Close();
         }
     }
 }
