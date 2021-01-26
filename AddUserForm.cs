@@ -80,6 +80,7 @@ namespace Project
                 newuser(AddNewUser.Name, AddNewUser.Email);
                 Controls.Clear();
                 InitializeComponent();
+                this.Hide();
 
             }
 
