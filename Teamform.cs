@@ -12,6 +12,19 @@ namespace Project
 {
     public partial class Teamform : Form
     {
+        static Team GetCurrentTeam(string name)
+        {
+            Team Currentteam = new Team();
+            foreach (Team team in SampleData.Teams)
+            {
+                if (team.Name == name)
+                {
+                    Currentteam = team;
+                }
+            }
+            return Currentteam;
+
+        }
         public Teamform(string TName)
         {
             InitializeComponent();
