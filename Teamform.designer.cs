@@ -236,6 +236,7 @@ namespace Project
             // 
             // MemberTab_panel
             // 
+            this.MemberTab_panel.AutoScroll = true;
             this.MemberTab_panel.Location = new System.Drawing.Point(7, 14);
             this.MemberTab_panel.Name = "MemberTab_panel";
             this.MemberTab_panel.Size = new System.Drawing.Size(859, 299);

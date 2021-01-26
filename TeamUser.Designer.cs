@@ -30,16 +30,17 @@ namespace Project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.UserImage = new System.Windows.Forms.PictureBox();
-            this.TeamUserName = new System.Windows.Forms.Label();
-            this.userEmail = new System.Windows.Forms.Label();
             this.RmoveTeamUserBtn = new System.Windows.Forms.Button();
+            this.userEmail = new System.Windows.Forms.Label();
+            this.TeamUserName = new System.Windows.Forms.Label();
+            this.UserImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.RmoveTeamUserBtn);
             this.panel1.Controls.Add(this.userEmail);
@@ -47,8 +48,42 @@ namespace Project
             this.panel1.Controls.Add(this.UserImage);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(626, 82);
+            this.panel1.Size = new System.Drawing.Size(481, 86);
             this.panel1.TabIndex = 0;
+            // 
+            // RmoveTeamUserBtn
+            // 
+            this.RmoveTeamUserBtn.BackColor = System.Drawing.Color.Crimson;
+            this.RmoveTeamUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RmoveTeamUserBtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RmoveTeamUserBtn.ForeColor = System.Drawing.Color.White;
+            this.RmoveTeamUserBtn.Location = new System.Drawing.Point(359, 29);
+            this.RmoveTeamUserBtn.Name = "RmoveTeamUserBtn";
+            this.RmoveTeamUserBtn.Size = new System.Drawing.Size(96, 35);
+            this.RmoveTeamUserBtn.TabIndex = 3;
+            this.RmoveTeamUserBtn.Text = "Remove";
+            this.RmoveTeamUserBtn.UseVisualStyleBackColor = false;
+            // 
+            // userEmail
+            // 
+            this.userEmail.AutoSize = true;
+            this.userEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userEmail.ForeColor = System.Drawing.Color.Gray;
+            this.userEmail.Location = new System.Drawing.Point(116, 44);
+            this.userEmail.Name = "userEmail";
+            this.userEmail.Size = new System.Drawing.Size(45, 20);
+            this.userEmail.TabIndex = 2;
+            this.userEmail.Text = "email";
+            // 
+            // TeamUserName
+            // 
+            this.TeamUserName.AutoSize = true;
+            this.TeamUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeamUserName.Location = new System.Drawing.Point(106, 23);
+            this.TeamUserName.Name = "TeamUserName";
+            this.TeamUserName.Size = new System.Drawing.Size(94, 21);
+            this.TeamUserName.TabIndex = 1;
+            this.TeamUserName.Text = "User Name";
             // 
             // UserImage
             // 
@@ -59,47 +94,13 @@ namespace Project
             this.UserImage.TabIndex = 0;
             this.UserImage.TabStop = false;
             // 
-            // TeamUserName
-            // 
-            this.TeamUserName.AutoSize = true;
-            this.TeamUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TeamUserName.Location = new System.Drawing.Point(105, 12);
-            this.TeamUserName.Name = "TeamUserName";
-            this.TeamUserName.Size = new System.Drawing.Size(94, 21);
-            this.TeamUserName.TabIndex = 1;
-            this.TeamUserName.Text = "User Name";
-            // 
-            // userEmail
-            // 
-            this.userEmail.AutoSize = true;
-            this.userEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userEmail.ForeColor = System.Drawing.Color.Gray;
-            this.userEmail.Location = new System.Drawing.Point(123, 44);
-            this.userEmail.Name = "userEmail";
-            this.userEmail.Size = new System.Drawing.Size(45, 20);
-            this.userEmail.TabIndex = 2;
-            this.userEmail.Text = "email";
-            // 
-            // RmoveTeamUserBtn
-            // 
-            this.RmoveTeamUserBtn.BackColor = System.Drawing.Color.Crimson;
-            this.RmoveTeamUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RmoveTeamUserBtn.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RmoveTeamUserBtn.ForeColor = System.Drawing.Color.White;
-            this.RmoveTeamUserBtn.Location = new System.Drawing.Point(498, 21);
-            this.RmoveTeamUserBtn.Name = "RmoveTeamUserBtn";
-            this.RmoveTeamUserBtn.Size = new System.Drawing.Size(111, 43);
-            this.RmoveTeamUserBtn.TabIndex = 3;
-            this.RmoveTeamUserBtn.Text = "Remove";
-            this.RmoveTeamUserBtn.UseVisualStyleBackColor = false;
-            // 
             // TeamUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "TeamUser";
-            this.Size = new System.Drawing.Size(632, 88);
+            this.Size = new System.Drawing.Size(486, 92);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserImage)).EndInit();
