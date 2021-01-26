@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.users = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,13 +44,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Invite Member";
             // 
-            // checkedListBox1
+            // users
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(27, 124);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(192, 244);
-            this.checkedListBox1.TabIndex = 3;
+            this.users.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.users.FormattingEnabled = true;
+            this.users.Location = new System.Drawing.Point(27, 124);
+            this.users.Name = "users";
+            this.users.Size = new System.Drawing.Size(192, 244);
+            this.users.TabIndex = 3;
             // 
             // label2
             // 
@@ -71,6 +72,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Invite_Member
             // 
@@ -79,10 +81,11 @@
             this.ClientSize = new System.Drawing.Size(444, 418);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.users);
             this.Controls.Add(this.label1);
             this.Name = "Invite_Member";
             this.Text = "Invite_Member";
+            this.Load += new System.EventHandler(this.Invite_Member_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,7 +94,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox users;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
     }

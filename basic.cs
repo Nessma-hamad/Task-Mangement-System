@@ -10,19 +10,15 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class basic : Form
+    public partial class basic : Form 
     {
-        List<User> Users = new List<User>
-        {
-             new User{ID=1,Name="Eman",Email="Eman@yahoo.com"},
-             new User{ID=2,Name="Saffa",Email="Saffa@yahoo.com"},
-             new User{ID=3, Name="Nessama",Email="Nessma@yahoo.com"}
-        };
+        List<User> Users = SampleData.Users;
         public basic()
         {
             InitializeComponent();
         }
 
+      
         private void Form1_Load(object sender, EventArgs e)
         {
             foreach(User user in Users)

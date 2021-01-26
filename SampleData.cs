@@ -8,6 +8,12 @@ namespace Project
 {
     class SampleData
     {
+        public static List<User> Users = new List<User>
+        {
+             new User{ID=1,Name="Eman",Email="Eman@yahoo.com"},
+             new User{ID=2,Name="Saffa",Email="Saffa@yahoo.com"},
+             new User{ID=3, Name="Nessama",Email="Nessma@yahoo.com"}
+        };
         public static List<Team> Teams = new List<Team>
         {
             new Team{Name="C#",Description="We design C# project",users=new List<User>

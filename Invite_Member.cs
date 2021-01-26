@@ -12,9 +12,51 @@ namespace Project
 {
     public partial class Invite_Member : Form
     {
+        List<User> Users = SampleData.Users;
+        string currentteam_name = string.Empty;
+        static Team GetCurrentTeam(string name)
+        {
+            Team Currentteam = new Team();
+            foreach (Team team in SampleData.Teams)
+            {
+                if (team.Name == name)
+                {
+                    Currentteam = team;
+                }
+            }
+            return Currentteam;
+
+        }
         public Invite_Member()
         {
             InitializeComponent();
+        }
+
+        private void Invite_Member_Load(object sender, EventArgs e)
+        {
+            foreach (User user in Users)
+            {
+                users.Items.Add(user.Name);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Team Currentteam = GetCurrentTeam(currentteam_name);
+            foreach(string username in users.SelectedItems)
+            {
+                foreach (User user in Users)
+                {
+                    if(user.Name==username)
+                    {
+                        Currentteam.users.Add(user);
+                    }
+
+                }
+
+               
+
+            }
         }
     }
 }
