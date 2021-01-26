@@ -62,7 +62,7 @@ namespace Project
         private void Create_task_Click(object sender, EventArgs e)
         {
             String TaskCategory =Task_Category.SelectedItem.ToString();
-
+            Team Currentteam = GetCurrentTeam(currentteam_name);
             Task NewTask = new Task(TaskCategory);
 
             NewTask.Name= Task_Name.Text;
@@ -71,13 +71,22 @@ namespace Project
             
             
            
-            foreach(User user in currentteam_users.SelectedItems)
+            foreach(string username in currentteam_users.SelectedItems)
             {
-                NewTask.Team_Users.Add(user);
+                foreach (User user in Currentteam.users)
+                {
+                    if(user.Name==username)
+                    {
+                        NewTask.Team_Users.Add(user);
+                    }
+
+                }
+
+               
 
             }
 
-            Team Currentteam = GetCurrentTeam(currentteam_name);
+           
             Currentteam.TeamTasks.Add(NewTask);
             foreach(Category category in Currentteam.categories)
             {

@@ -39,7 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Create_task = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.currentteam_users = new System.Windows.Forms.ListBox();
+            this.currentteam_users = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -145,13 +145,13 @@
             // 
             // currentteam_users
             // 
+            this.currentteam_users.CheckOnClick = true;
             this.currentteam_users.FormattingEnabled = true;
-            this.currentteam_users.Location = new System.Drawing.Point(385, 145);
+            this.currentteam_users.Location = new System.Drawing.Point(385, 146);
             this.currentteam_users.MultiColumn = true;
             this.currentteam_users.Name = "currentteam_users";
-            this.currentteam_users.Size = new System.Drawing.Size(271, 147);
+            this.currentteam_users.Size = new System.Drawing.Size(304, 154);
             this.currentteam_users.TabIndex = 11;
-            this.currentteam_users.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // AddTask
             // 
@@ -191,7 +191,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Create_task;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox currentteam_users;
+        private System.Windows.Forms.CheckedListBox currentteam_users;
     }
 }
 
