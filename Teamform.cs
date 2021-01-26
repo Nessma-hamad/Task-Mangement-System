@@ -74,9 +74,14 @@ namespace Project
         }
         public void AddCategory(string name)
         {
-            Team t = new Team(this.TeamName.Text, this.DescriptionTeam.Text);
-            t.categories.Add(new Category(name));
-            this.categoryList.Items.Add(name);
+            Team Currentteam = GetCurrentTeam(TeamName.Text);
+            Currentteam.categories.Add(new Category(name));
+            categoryList.DataSource = null;
+            foreach (Category c in Currentteam.categories)
+            {
+                categoryList.DisplayMember = nameof(c.Name);
+                categoryList.DataSource = Currentteam.categories;
+            }
         }
 
         private void Teamform_Load(object sender, EventArgs e)
