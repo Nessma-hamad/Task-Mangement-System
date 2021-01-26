@@ -8,31 +8,30 @@ namespace Project
 {
     class User
     {
-        public int ID { set; get; }
+       
         public string Name { set; get; }
         public string Email { set; get; }
-        public string Password { set; get; }
+        
         public string Picture { set; get; }
         public User() { }
-        public User(int id, string name, string email, string password, string picture)
+        public User(  string name, string email, string password, string picture)
         {
-            ID = id;
+           
             Name = name;
             Email = email;
-            Password = password;
             Picture = picture;
         }
-        public User(int id, string name, string email, string password)
+        public User( string name, string email )
         {
-            ID = id;
+           
             Name = name;
             Email = email;
-            Password = password;
+            
             Picture = "default photo";
         }
         public void GetUserDetails()
         {
-            Console.WriteLine($"userId: {ID} , userName : {Name}, userEmail : {Email} ");
+            Console.WriteLine($" userName : {Name}, userEmail : {Email} ");
 
         }
       

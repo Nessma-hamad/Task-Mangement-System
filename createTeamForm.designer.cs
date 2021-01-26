@@ -38,10 +38,10 @@
             // desc_txtbox
             // 
             this.desc_txtbox.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.desc_txtbox.Location = new System.Drawing.Point(262, 150);
+            this.desc_txtbox.Location = new System.Drawing.Point(262, 152);
             this.desc_txtbox.Multiline = true;
             this.desc_txtbox.Name = "desc_txtbox";
-            this.desc_txtbox.Size = new System.Drawing.Size(256, 100);
+            this.desc_txtbox.Size = new System.Drawing.Size(274, 100);
             this.desc_txtbox.TabIndex = 15;
             // 
             // NameTeam_txtbox
@@ -49,7 +49,7 @@
             this.NameTeam_txtbox.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameTeam_txtbox.Location = new System.Drawing.Point(262, 78);
             this.NameTeam_txtbox.Name = "NameTeam_txtbox";
-            this.NameTeam_txtbox.Size = new System.Drawing.Size(256, 40);
+            this.NameTeam_txtbox.Size = new System.Drawing.Size(274, 40);
             this.NameTeam_txtbox.TabIndex = 14;
             this.NameTeam_txtbox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -77,7 +77,7 @@
             // Addteambtn
             // 
             this.Addteambtn.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addteambtn.Location = new System.Drawing.Point(389, 298);
+            this.Addteambtn.Location = new System.Drawing.Point(505, 409);
             this.Addteambtn.Name = "Addteambtn";
             this.Addteambtn.Size = new System.Drawing.Size(165, 53);
             this.Addteambtn.TabIndex = 16;
@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 363);
+            this.ClientSize = new System.Drawing.Size(752, 495);
             this.Controls.Add(this.Addteambtn);
             this.Controls.Add(this.desc_txtbox);
             this.Controls.Add(this.NameTeam_txtbox);

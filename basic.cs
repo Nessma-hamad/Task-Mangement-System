@@ -12,31 +12,63 @@ namespace Project
 {
     public partial class basic : Form
     {
-        List<User> Users = new List<User>
-        {
-             new User{ID=1,Name="Eman",Email="Eman@yahoo.com"},
-             new User{ID=2,Name="Saffa",Email="Saffa@yahoo.com"},
-             new User{ID=3, Name="Nessama",Email="Nessma@yahoo.com"}
-        };
+        List<Team> listOfTeams = new List<Team>();
         public basic()
         {
             InitializeComponent();
+            AddUserForm.newuser += adduser;
+            createTeamForm.NewTeam += addteam;
+
+
+
+        }
+
+        private void addteam(string teamName, string teamDesciption)
+        {
+            listOfTeams.Add(new Team(teamName, teamDesciption));
+            // MessageBox.Show("tema addes");
+            int width = 120;
+            int height = 100;
+
+            foreach (Team team in listOfTeams)
+            {
+                Button dynamicTeamBtn = new Button();
+                dynamicTeamBtn.Location = new Point(width, height);
+                dynamicTeamBtn.Text = team.Name;
+                //MessageBox.Show(tt.Name);
+                dynamicTeamBtn.Font = new Font("Georgia", 16);
+                dynamicTeamBtn.Click += new EventHandler(ShowTeam);
+                dynamicTeamBtn.Size = new Size(150, 70);
+                Team_Tab.Controls.Add(dynamicTeamBtn);
+                width += 160;
+                //loc2 += 50;
+                label1.Text = "you have " + listOfTeams.Count.ToString() + " Teams";
+            }
+
+        }
+
+
+
+        private void adduser(string nameOFuser, string emailofuser)
+        {
+            ListViewItem items = lvData.Items.Add(nameOFuser);
+            items.SubItems.Add(emailofuser);
+            int numberOfUser = lvData.Items.Count;
+            noOfUser.Text = "No Of Users " + numberOfUser.ToString();
+            lvData.Visible = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach(User user in Users)
-            {
-                system_users.Items.Add(user.Name);
-            }
-            int loc = 20;
-            foreach (var item in SampleData.Teams)
-            {
-                Button btn = new Button() { Text = item.Name, Location = new Point(loc, 50), Size = new Size(100, 100) };
-                btn.Click += new EventHandler(ShowTeam);
-                this.Team_Tab.Controls.Add(btn);
-                loc += 100;
-            }
+            //int loc = 20;
+            //foreach (var item in SampleData.Teams)
+            //{
+            //    Button btn = new Button() { Text = item.Name, Location = new Point(loc, 50), Size = new Size(100, 100) };
+            //    btn.Click += new EventHandler(ShowTeam);
+            //    this.Team_Tab.Controls.Add(btn);
+            //    loc += 100;
+            //}
+
         }
         public void ShowTeam(object sender, EventArgs e)
         {
@@ -70,6 +102,16 @@ namespace Project
         {
             AddUserForm adduser = new AddUserForm();
             adduser.Show();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Users_tab_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
