@@ -85,5 +85,10 @@ namespace Project
             /* Category category = (Category)categoryList.SelectedItem;
              fillListOfTask(category.Tasks);*/
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            if(contextMenuStrip1)
+        }
     }
 }
