@@ -38,7 +38,6 @@ namespace Project
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cName = new System.Windows.Forms.Label();
             this.categoryList = new System.Windows.Forms.ComboBox();
@@ -48,12 +47,13 @@ namespace Project
             this.MemberTab_panel = new System.Windows.Forms.Panel();
             this.AddMemberBtn = new System.Windows.Forms.Button();
             this.ArchiveTab = new System.Windows.Forms.TabPage();
-            this.DescriptionTeam = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.TaskNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PirorityHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DeadlineHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TaskCategoryColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DescriptionTeam = new System.Windows.Forms.Label();
+            this.checkedListBox_Tasks = new System.Windows.Forms.CheckedListBox();
             this.TeamTabs.SuspendLayout();
             this.CategoryTab.SuspendLayout();
             this.CategoriesPanel.SuspendLayout();
@@ -122,7 +122,7 @@ namespace Project
             // CategoriesPanel
             // 
             this.CategoriesPanel.AutoScroll = true;
-            this.CategoriesPanel.Controls.Add(this.listBox1);
+            this.CategoriesPanel.Controls.Add(this.checkedListBox_Tasks);
             this.CategoriesPanel.Controls.Add(this.panel2);
             this.CategoriesPanel.Controls.Add(this.categoryList);
             this.CategoriesPanel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,39 +137,28 @@ namespace Project
             this.showToolStripMenuItem,
             this.removeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(118, 48);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.showToolStripMenuItem.Text = "show";
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.removeToolStripMenuItem.Text = "Remove";
-            // 
-            // listBox1
-            // 
-            this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 30;
-            this.listBox1.Location = new System.Drawing.Point(501, 51);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(325, 214);
-            this.listBox1.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.panel2.Controls.Add(this.cName);
-            this.panel2.Location = new System.Drawing.Point(501, 3);
+            this.panel2.Location = new System.Drawing.Point(486, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(325, 49);
+            this.panel2.Size = new System.Drawing.Size(340, 49);
             this.panel2.TabIndex = 1;
             // 
             // cName
@@ -278,15 +267,6 @@ namespace Project
             this.ArchiveTab.Text = "Archive";
             this.ArchiveTab.UseVisualStyleBackColor = true;
             // 
-            // DescriptionTeam
-            // 
-            this.DescriptionTeam.AutoSize = true;
-            this.DescriptionTeam.Location = new System.Drawing.Point(137, 80);
-            this.DescriptionTeam.Name = "DescriptionTeam";
-            this.DescriptionTeam.Size = new System.Drawing.Size(51, 20);
-            this.DescriptionTeam.TabIndex = 3;
-            this.DescriptionTeam.Text = "label1";
-            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -321,6 +301,25 @@ namespace Project
             // 
             this.TaskCategoryColumn.Text = "Category";
             this.TaskCategoryColumn.Width = 197;
+            // 
+            // DescriptionTeam
+            // 
+            this.DescriptionTeam.AutoSize = true;
+            this.DescriptionTeam.Location = new System.Drawing.Point(137, 80);
+            this.DescriptionTeam.Name = "DescriptionTeam";
+            this.DescriptionTeam.Size = new System.Drawing.Size(51, 20);
+            this.DescriptionTeam.TabIndex = 3;
+            this.DescriptionTeam.Text = "label1";
+            // 
+            // checkedListBox_Tasks
+            // 
+            this.checkedListBox_Tasks.ContextMenuStrip = this.contextMenuStrip1;
+            this.checkedListBox_Tasks.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox_Tasks.FormattingEnabled = true;
+            this.checkedListBox_Tasks.Location = new System.Drawing.Point(486, 49);
+            this.checkedListBox_Tasks.Name = "checkedListBox_Tasks";
+            this.checkedListBox_Tasks.Size = new System.Drawing.Size(340, 200);
+            this.checkedListBox_Tasks.TabIndex = 2;
             // 
             // Teamform
             // 
@@ -370,7 +369,6 @@ namespace Project
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
         private System.Windows.Forms.ComboBox categoryList;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label cName;
         private System.Windows.Forms.Label DescriptionTeam;
@@ -379,6 +377,7 @@ namespace Project
         private System.Windows.Forms.ColumnHeader PirorityHeader;
         private System.Windows.Forms.ColumnHeader DeadlineHeader;
         private System.Windows.Forms.ColumnHeader TaskCategoryColumn;
+        private System.Windows.Forms.CheckedListBox checkedListBox_Tasks;
     }
 }
 

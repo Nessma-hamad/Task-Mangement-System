@@ -34,10 +34,10 @@ namespace Project
         }
         private void fillListOfTask(IEnumerable<Task> Tasks)
         {
-            listBox1.Items.Clear();
+            checkedListBox_Tasks.Items.Clear();
             foreach (Task task in Tasks)
             {
-                listBox1.Items.Add(task.Name);
+                checkedListBox_Tasks.Items.Add(task.Name);
             }
         }
         private void DisplayTeamUsers()
