@@ -49,12 +49,18 @@ namespace Project
             this.AddMemberBtn = new System.Windows.Forms.Button();
             this.ArchiveTab = new System.Windows.Forms.TabPage();
             this.DescriptionTeam = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.TaskNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PirorityHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DeadlineHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TaskCategoryColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TeamTabs.SuspendLayout();
             this.CategoryTab.SuspendLayout();
             this.CategoriesPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.MembersTab.SuspendLayout();
+            this.ArchiveTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // TeamformClose
@@ -181,9 +187,9 @@ namespace Project
             // 
             this.categoryList.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryList.FormattingEnabled = true;
-            this.categoryList.Location = new System.Drawing.Point(65, 35);
+            this.categoryList.Location = new System.Drawing.Point(31, 35);
             this.categoryList.Name = "categoryList";
-            this.categoryList.Size = new System.Drawing.Size(206, 32);
+            this.categoryList.Size = new System.Drawing.Size(252, 32);
             this.categoryList.TabIndex = 0;
             this.categoryList.Text = "Categories List";
             this.categoryList.SelectedIndexChanged += new System.EventHandler(this.categoryList_SelectedIndexChanged);
@@ -261,7 +267,8 @@ namespace Project
             // 
             // ArchiveTab
             // 
-            this.ArchiveTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ArchiveTab.Controls.Add(this.listView1);
+            this.ArchiveTab.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ArchiveTab.Location = new System.Drawing.Point(4, 64);
             this.ArchiveTab.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.ArchiveTab.Name = "ArchiveTab";
@@ -279,6 +286,41 @@ namespace Project
             this.DescriptionTeam.Size = new System.Drawing.Size(51, 20);
             this.DescriptionTeam.TabIndex = 3;
             this.DescriptionTeam.Text = "label1";
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.TaskNameHeader,
+            this.PirorityHeader,
+            this.DeadlineHeader,
+            this.TaskCategoryColumn});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(6, 14);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(860, 352);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // TaskNameHeader
+            // 
+            this.TaskNameHeader.Text = "Task Name";
+            this.TaskNameHeader.Width = 228;
+            // 
+            // PirorityHeader
+            // 
+            this.PirorityHeader.Text = "pirority";
+            this.PirorityHeader.Width = 155;
+            // 
+            // DeadlineHeader
+            // 
+            this.DeadlineHeader.Text = "DeadLine";
+            this.DeadlineHeader.Width = 265;
+            // 
+            // TaskCategoryColumn
+            // 
+            this.TaskCategoryColumn.Text = "Category";
+            this.TaskCategoryColumn.Width = 197;
             // 
             // Teamform
             // 
@@ -305,6 +347,7 @@ namespace Project
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.MembersTab.ResumeLayout(false);
+            this.ArchiveTab.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,6 +374,11 @@ namespace Project
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label cName;
         private System.Windows.Forms.Label DescriptionTeam;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader TaskNameHeader;
+        private System.Windows.Forms.ColumnHeader PirorityHeader;
+        private System.Windows.Forms.ColumnHeader DeadlineHeader;
+        private System.Windows.Forms.ColumnHeader TaskCategoryColumn;
     }
 }
 

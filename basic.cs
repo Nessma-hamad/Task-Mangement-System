@@ -18,9 +18,6 @@ namespace Project
             InitializeComponent();
             AddUserForm.newuser += adduser;
             createTeamForm.NewTeam += addteam;
-
-
-
         }
 
         private void addteam(string teamName, string teamDesciption)
