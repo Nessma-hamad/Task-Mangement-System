@@ -17,7 +17,7 @@ namespace Project
         }
         public override string ToString()
         {
-            return $"Ctegory Name : {Name}";
+            return Name;
         }
     }
 }

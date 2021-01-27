@@ -24,6 +24,10 @@ namespace Project
            
 
         }
+        public Team(string name)
+        {
+            this.Name = name;
+        }
         public Team(string name,string description)
         {
             this.Name = name;

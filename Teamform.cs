@@ -12,6 +12,19 @@ namespace Project
 {
     public partial class Teamform : Form
     {
+        static Team GetCurrentTeam(string name)
+        {
+            Team Currentteam = new Team();
+            foreach (Team team in SampleData.Teams)
+            {
+                if (team.Name == name)
+                {
+                    Currentteam = team;
+                }
+            }
+            return Currentteam;
+
+        }
         public Teamform(string TName)
         {
             InitializeComponent();
@@ -25,6 +38,16 @@ namespace Project
             foreach (Task task in Tasks)
             {
                 listBox1.Items.Add(task.Name);
+            }
+        }
+        private void DisplayTeamUsers()
+        {
+            int y = 0;
+            Team team = GetCurrentTeam(TeamName.Text);
+            foreach (User u in team.users)
+            {
+                MemberTab_panel.Controls.Add(new TeamUser() { UserName = u.Name, Email = u.Email, Location = new Point(0, y), Size = new Size(440, 50) });
+                y += 60;
             }
         }
         private void TeamformClose_Click(object sender, EventArgs e)
@@ -51,9 +74,14 @@ namespace Project
         }
         public void AddCategory(string name)
         {
-            Team t = new Team(this.TeamName.Text, this.DescriptionTeam.Text);
-            t.categories.Add(new Category(name));
-            this.categoryList.Items.Add(name);
+            Team Currentteam = GetCurrentTeam(TeamName.Text);
+            Currentteam.categories.Add(new Category(name));
+            categoryList.DataSource = null;
+            foreach (Category c in Currentteam.categories)
+            {
+                categoryList.DisplayMember = nameof(c.Name);
+                categoryList.DataSource = Currentteam.categories;
+            }
         }
 
         private void Teamform_Load(object sender, EventArgs e)
@@ -64,15 +92,14 @@ namespace Project
                 {
                     foreach (Category i in item.categories)
                     {
-                        /*categoryList.DataSource = null;
-                        categoryList.DisplayMember = nameof(i.Name);//"Name";
-                        categoryList.ValueMember = "category";  //"ID";
-                        categoryList.DataSource = item.categories;*/
-                        categoryList.Items.Add(i.Name);
+                        categoryList.DataSource = null;
+                        categoryList.DisplayMember = nameof(i.Name);
+                        categoryList.DataSource = item.categories;
                     }
                 }
 
             }
+            DisplayTeamUsers();
         }
         private void categoryList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -81,9 +108,14 @@ namespace Project
                 cName.Text = string.Empty;
                 return;
             }
+            Category category = (Category)categoryList.SelectedItem;
             cName.Text = categoryList.SelectedItem.ToString();
-            /* Category category = (Category)categoryList.SelectedItem;
-             fillListOfTask(category.Tasks);*/
+            fillListOfTask(category.Tasks);
+        }
+
+        private void MembersTab_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)

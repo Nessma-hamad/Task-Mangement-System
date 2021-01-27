@@ -45,7 +45,7 @@ namespace Project
             this.AddTaskBtn = new System.Windows.Forms.Button();
             this.openAdditionformCategory = new System.Windows.Forms.Button();
             this.MembersTab = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.MemberTab_panel = new System.Windows.Forms.Panel();
             this.AddMemberBtn = new System.Windows.Forms.Button();
             this.ArchiveTab = new System.Windows.Forms.TabPage();
             this.DescriptionTeam = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@ namespace Project
             this.TeamformClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TeamformClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeamformClose.ForeColor = System.Drawing.Color.White;
-            this.TeamformClose.Location = new System.Drawing.Point(847, 2);
+            this.TeamformClose.Location = new System.Drawing.Point(836, 3);
             this.TeamformClose.Name = "TeamformClose";
             this.TeamformClose.Size = new System.Drawing.Size(57, 49);
             this.TeamformClose.TabIndex = 0;
@@ -116,7 +116,6 @@ namespace Project
             // CategoriesPanel
             // 
             this.CategoriesPanel.AutoScroll = true;
-            this.CategoriesPanel.ContextMenuStrip = this.contextMenuStrip1;
             this.CategoriesPanel.Controls.Add(this.listBox1);
             this.CategoriesPanel.Controls.Add(this.panel2);
             this.CategoriesPanel.Controls.Add(this.categoryList);
@@ -149,21 +148,22 @@ namespace Project
             // 
             // listBox1
             // 
+            this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.listBox1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 30;
-            this.listBox1.Location = new System.Drawing.Point(583, 81);
+            this.listBox1.Location = new System.Drawing.Point(501, 51);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(243, 184);
+            this.listBox1.Size = new System.Drawing.Size(325, 214);
             this.listBox1.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.panel2.Controls.Add(this.cName);
-            this.panel2.Location = new System.Drawing.Point(583, 35);
+            this.panel2.Location = new System.Drawing.Point(501, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(243, 49);
+            this.panel2.Size = new System.Drawing.Size(325, 49);
             this.panel2.TabIndex = 1;
             // 
             // cName
@@ -186,6 +186,7 @@ namespace Project
             this.categoryList.Size = new System.Drawing.Size(206, 32);
             this.categoryList.TabIndex = 0;
             this.categoryList.Text = "Categories List";
+            this.categoryList.SelectedIndexChanged += new System.EventHandler(this.categoryList_SelectedIndexChanged);
             // 
             // AddTaskBtn
             // 
@@ -222,7 +223,7 @@ namespace Project
             // 
             // MembersTab
             // 
-            this.MembersTab.Controls.Add(this.panel1);
+            this.MembersTab.Controls.Add(this.MemberTab_panel);
             this.MembersTab.Controls.Add(this.AddMemberBtn);
             this.MembersTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MembersTab.Location = new System.Drawing.Point(4, 64);
@@ -233,13 +234,15 @@ namespace Project
             this.MembersTab.TabIndex = 1;
             this.MembersTab.Text = "Members";
             this.MembersTab.UseVisualStyleBackColor = true;
+            this.MembersTab.Click += new System.EventHandler(this.MembersTab_Click);
             // 
-            // panel1
+            // MemberTab_panel
             // 
-            this.panel1.Location = new System.Drawing.Point(7, 14);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(859, 299);
-            this.panel1.TabIndex = 1;
+            this.MemberTab_panel.AutoScroll = true;
+            this.MemberTab_panel.Location = new System.Drawing.Point(7, 14);
+            this.MemberTab_panel.Name = "MemberTab_panel";
+            this.MemberTab_panel.Size = new System.Drawing.Size(859, 299);
+            this.MemberTab_panel.TabIndex = 1;
             // 
             // AddMemberBtn
             // 
@@ -319,7 +322,7 @@ namespace Project
         private System.Windows.Forms.Button AddMemberBtn;
         private System.Windows.Forms.TabPage ArchiveTab;
         private System.Windows.Forms.Panel CategoriesPanel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel MemberTab_panel;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
