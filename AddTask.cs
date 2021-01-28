@@ -12,6 +12,7 @@ namespace Project
 {
     public partial class AddTask : Form
     {
+        bool created = false;
         string currentteam_name = string.Empty;
         string task_name = string.Empty;
 
@@ -80,6 +81,8 @@ namespace Project
                 Task_Category.SelectedItem=Currenttask.Task_Catergory.Name.ToString();
                 Task_Pirority.SelectedItem=Currenttask.pirority;
                 Task_Name.Text = task_name;
+                Task_Dateline.Value = Currenttask.DateLine;
+                created = true;
             }
             else if(Currenttask==null)
             {
@@ -99,40 +102,78 @@ namespace Project
         private void Create_task_Click(object sender, EventArgs e)
         {
 
-            String TaskCategory =Task_Category.SelectedItem.ToString();
-            Team Currentteam = GetCurrentTeam(currentteam_name);
-            Task NewTask = new Task(TaskCategory);
-
-            NewTask.Name= Task_Name.Text;
-            NewTask.DateLine=Task_Dateline.Value;
-            NewTask.pirority = (Pirority)Task_Pirority.SelectedItem;
-            
-            
            
-            foreach(string username in currentteam_users.SelectedItems)
+            Team Currentteam = GetCurrentTeam(currentteam_name);
+            if(created==true)
             {
-                foreach (User user in Currentteam.users)
+                //Task Currenttask = null;
+                
+                foreach (Task task in Currentteam.TeamTasks)
                 {
-                    if(user.Name==username)
+                    if (task.Name == task_name)
                     {
-                        NewTask.Team_Users.Add(user);
+                        //Currenttask = task;
+                        task.Name = Task_Name.Text;
+                        task.DateLine = Task_Dateline.Value;
+                        task.pirority = (Pirority)Task_Pirority.SelectedItem;
+                        task.Task_Catergory.Name= Task_Category.SelectedItem.ToString();
+
+
+
+                        foreach (string username in currentteam_users.SelectedItems)
+                        {
+                            foreach (User user in Currentteam.users)
+                            {
+                                if (user.Name == username)
+                                {
+                                    task.Team_Users.Add(user);
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+                
+
+            }
+            else
+            {
+                String TaskCategory = Task_Category.SelectedItem.ToString();
+                Task NewTask = new Task(TaskCategory);
+
+                NewTask.Name = Task_Name.Text;
+                NewTask.DateLine = Task_Dateline.Value;
+                NewTask.pirority = (Pirority)Task_Pirority.SelectedItem;
+
+
+
+                foreach (string username in currentteam_users.SelectedItems)
+                {
+                    foreach (User user in Currentteam.users)
+                    {
+                        if (user.Name == username)
+                        {
+                            NewTask.Team_Users.Add(user);
+                        }
+
                     }
 
+
+
                 }
 
-               
 
-            }
-
-           
-            Currentteam.TeamTasks.Add(NewTask);
-            foreach(Category category in Currentteam.categories)
-            {
-                if(category.Name== TaskCategory)
+                Currentteam.TeamTasks.Add(NewTask);
+                foreach (Category category in Currentteam.categories)
                 {
-                    category.Tasks.Add(NewTask);
+                    if (category.Name == TaskCategory)
+                    {
+                        category.Tasks.Add(NewTask);
+                    }
                 }
             }
+            
             //if(TaskCategory==string.Empty)
             //{
             //    MessageBox.Show("Please select Catergory ..");
