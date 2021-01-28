@@ -62,6 +62,7 @@ namespace Project
             foreach (Task task in Tasks)
             {
                 checkedListBox_Tasks.Items.Add(task.Name);
+                
             }
         }
         private void DisplayTeamUsers()
@@ -93,6 +94,7 @@ namespace Project
         {
             AddTask addtask = new AddTask(TeamName.Text);
             addtask.Show();
+            
         }
 
         private void AddMemberBtn_Click(object sender, EventArgs e)
@@ -134,9 +136,43 @@ namespace Project
 
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+       
+
+        private void contextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            
+            Team current = GetCurrentTeam(TeamName.Text);
+
+            if (e.ClickedItem.ToString()== "show")
+            {
+                View_Task view = new View_Task(current.Name, checkedListBox_Tasks.SelectedItem.ToString());
+                view.Show();
+            }
+            else if (e.ClickedItem.ToString() == "Remove")
+            {
+                Task team_task= new Task();
+                foreach (Task task in current.TeamTasks)
+                {
+                    //foreach (Category category in current.categories)
+                    //{
+                    //    foreach (Task ctask in category.Tasks)
+                    //    {
+                    //        if (ctask.Name == checkedListBox_Tasks.SelectedItem.ToString())
+                    //        {
+                    //            category.Tasks.Remove(ctask);
+                    //        }
+                    //    }
+                    //}
+                    if (task.Name==checkedListBox_Tasks.SelectedItem.ToString())
+                    {
+                        team_task = task;
+                    }
+                }
+
+                
+                
+
+                current.TeamTasks.Remove(team_task);
+            }
         }
     }
 }

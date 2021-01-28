@@ -35,6 +35,7 @@ namespace Project
             this.TeamTabs = new System.Windows.Forms.TabControl();
             this.CategoryTab = new System.Windows.Forms.TabPage();
             this.CategoriesPanel = new System.Windows.Forms.Panel();
+            this.checkedListBox_Tasks = new System.Windows.Forms.CheckedListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,6 @@ namespace Project
             this.DeadlineHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TaskCategoryColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DescriptionTeam = new System.Windows.Forms.Label();
-            this.checkedListBox_Tasks = new System.Windows.Forms.CheckedListBox();
             this.TeamTabs.SuspendLayout();
             this.CategoryTab.SuspendLayout();
             this.CategoriesPanel.SuspendLayout();
@@ -131,6 +131,16 @@ namespace Project
             this.CategoriesPanel.Size = new System.Drawing.Size(840, 287);
             this.CategoriesPanel.TabIndex = 2;
             // 
+            // checkedListBox_Tasks
+            // 
+            this.checkedListBox_Tasks.ContextMenuStrip = this.contextMenuStrip1;
+            this.checkedListBox_Tasks.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox_Tasks.FormattingEnabled = true;
+            this.checkedListBox_Tasks.Location = new System.Drawing.Point(486, 49);
+            this.checkedListBox_Tasks.Name = "checkedListBox_Tasks";
+            this.checkedListBox_Tasks.Size = new System.Drawing.Size(340, 200);
+            this.checkedListBox_Tasks.TabIndex = 2;
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -138,18 +148,19 @@ namespace Project
             this.removeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(118, 48);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // showToolStripMenuItem
             // 
+            this.showToolStripMenuItem.CheckOnClick = true;
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.showToolStripMenuItem.Text = "show";
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.removeToolStripMenuItem.Text = "Remove";
             // 
             // panel2
@@ -310,16 +321,6 @@ namespace Project
             this.DescriptionTeam.Size = new System.Drawing.Size(51, 20);
             this.DescriptionTeam.TabIndex = 3;
             this.DescriptionTeam.Text = "label1";
-            // 
-            // checkedListBox_Tasks
-            // 
-            this.checkedListBox_Tasks.ContextMenuStrip = this.contextMenuStrip1;
-            this.checkedListBox_Tasks.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox_Tasks.FormattingEnabled = true;
-            this.checkedListBox_Tasks.Location = new System.Drawing.Point(486, 49);
-            this.checkedListBox_Tasks.Name = "checkedListBox_Tasks";
-            this.checkedListBox_Tasks.Size = new System.Drawing.Size(340, 200);
-            this.checkedListBox_Tasks.TabIndex = 2;
             // 
             // Teamform
             // 

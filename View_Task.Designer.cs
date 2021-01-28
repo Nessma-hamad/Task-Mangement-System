@@ -28,36 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.T_Name = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.T_ctaegory = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.T_dateline = new System.Windows.Forms.Label();
+            this.T_Done = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddComment = new System.Windows.Forms.Button();
+            this.writecomment = new System.Windows.Forms.TextBox();
+            this.T_comments = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.T_users = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.T_Pirority = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // T_Name
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Algerian", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(313, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Task NAme";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.T_Name.AutoSize = true;
+            this.T_Name.Font = new System.Drawing.Font("Algerian", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_Name.Location = new System.Drawing.Point(313, 29);
+            this.T_Name.Name = "T_Name";
+            this.T_Name.Size = new System.Drawing.Size(124, 21);
+            this.T_Name.TabIndex = 1;
+            this.T_Name.Text = "Task NAme";
+            this.T_Name.Click += new System.EventHandler(this.label1_Click);
             // 
             // label5
             // 
@@ -69,52 +71,52 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Category :";
             // 
-            // label2
+            // T_ctaegory
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 19);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Task Category ";
+            this.T_ctaegory.AutoSize = true;
+            this.T_ctaegory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_ctaegory.Location = new System.Drawing.Point(178, 96);
+            this.T_ctaegory.Name = "T_ctaegory";
+            this.T_ctaegory.Size = new System.Drawing.Size(132, 19);
+            this.T_ctaegory.TabIndex = 9;
+            this.T_ctaegory.Text = "Task Category ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 153);
+            this.label4.Location = new System.Drawing.Point(52, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 23);
             this.label4.TabIndex = 10;
             this.label4.Text = "DateLine :";
             // 
-            // label3
+            // T_dateline
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(178, 157);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 19);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Task Dateline";
+            this.T_dateline.AutoSize = true;
+            this.T_dateline.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_dateline.Location = new System.Drawing.Point(178, 142);
+            this.T_dateline.Name = "T_dateline";
+            this.T_dateline.Size = new System.Drawing.Size(122, 19);
+            this.T_dateline.TabIndex = 11;
+            this.T_dateline.Text = "Task Dateline";
             // 
-            // checkBox1
+            // T_Done
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(56, 214);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 27);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Done";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.T_Done.AutoSize = true;
+            this.T_Done.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_Done.Location = new System.Drawing.Point(56, 230);
+            this.T_Done.Name = "T_Done";
+            this.T_Done.Size = new System.Drawing.Size(78, 27);
+            this.T_Done.TabIndex = 16;
+            this.T_Done.Text = "Done";
+            this.T_Done.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.listBox3);
+            this.groupBox1.Controls.Add(this.AddComment);
+            this.groupBox1.Controls.Add(this.writecomment);
+            this.groupBox1.Controls.Add(this.T_comments);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(39, 516);
             this.groupBox1.Name = "groupBox1";
@@ -123,34 +125,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Task Comments ";
             // 
-            // listBox3
+            // AddComment
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 19;
-            this.listBox3.Location = new System.Drawing.Point(17, 37);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(271, 137);
-            this.listBox3.TabIndex = 20;
+            this.AddComment.Location = new System.Drawing.Point(617, 82);
+            this.AddComment.Name = "AddComment";
+            this.AddComment.Size = new System.Drawing.Size(30, 30);
+            this.AddComment.TabIndex = 22;
+            this.AddComment.Text = "+";
+            this.AddComment.UseVisualStyleBackColor = true;
+            this.AddComment.Click += new System.EventHandler(this.AddComment_Click);
             // 
-            // textBox1
+            // writecomment
             // 
-            this.textBox1.Location = new System.Drawing.Point(327, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 27);
-            this.textBox1.TabIndex = 21;
+            this.writecomment.Location = new System.Drawing.Point(327, 85);
+            this.writecomment.Name = "writecomment";
+            this.writecomment.Size = new System.Drawing.Size(271, 27);
+            this.writecomment.TabIndex = 21;
             // 
-            // button1
+            // T_comments
             // 
-            this.button1.Location = new System.Drawing.Point(617, 82);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.T_comments.FormattingEnabled = true;
+            this.T_comments.ItemHeight = 19;
+            this.T_comments.Location = new System.Drawing.Point(17, 37);
+            this.T_comments.Name = "T_comments";
+            this.T_comments.Size = new System.Drawing.Size(271, 137);
+            this.T_comments.TabIndex = 20;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listBox2);
+            this.groupBox2.Controls.Add(this.T_users);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(39, 275);
             this.groupBox2.Name = "groupBox2";
@@ -159,14 +162,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Assigned Users";
             // 
-            // listBox2
+            // T_users
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 19;
-            this.listBox2.Location = new System.Drawing.Point(17, 39);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(271, 137);
-            this.listBox2.TabIndex = 17;
+            this.T_users.FormattingEnabled = true;
+            this.T_users.ItemHeight = 19;
+            this.T_users.Location = new System.Drawing.Point(17, 39);
+            this.T_users.Name = "T_users";
+            this.T_users.Size = new System.Drawing.Size(271, 137);
+            this.T_users.TabIndex = 17;
             // 
             // groupBox3
             // 
@@ -191,30 +194,55 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(670, 30);
+            this.button2.Location = new System.Drawing.Point(703, 29);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 20;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // T_Pirority
+            // 
+            this.T_Pirority.AutoSize = true;
+            this.T_Pirority.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_Pirority.Location = new System.Drawing.Point(178, 189);
+            this.T_Pirority.Name = "T_Pirority";
+            this.T_Pirority.Size = new System.Drawing.Size(122, 19);
+            this.T_Pirority.TabIndex = 24;
+            this.T_Pirority.Text = "Task Dateline";
+            this.T_Pirority.Click += new System.EventHandler(this.T_Pirority_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(50, 186);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 23);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Pirority :";
             // 
             // View_Task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 729);
+            this.Controls.Add(this.T_Pirority);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.T_Done);
+            this.Controls.Add(this.T_dateline);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.T_ctaegory);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.T_Name);
             this.Name = "View_Task";
             this.Text = "View_Task";
+            this.Load += new System.EventHandler(this.View_Task_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -226,20 +254,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label T_Name;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label T_ctaegory;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label T_dateline;
+        private System.Windows.Forms.CheckBox T_Done;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button AddComment;
+        private System.Windows.Forms.TextBox writecomment;
+        private System.Windows.Forms.ListBox T_comments;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox T_users;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label T_Pirority;
+        private System.Windows.Forms.Label label2;
     }
 }

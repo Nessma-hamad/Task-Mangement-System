@@ -23,10 +23,14 @@ namespace Project
         public Pirority pirority { get; set; }
 
         public List<User> Team_Users = new List<User>();
-        Category Task_Catergory ;
+        public Category Task_Catergory ;
 
         public List<Comment> Comments= new List<Comment>();
-       public Task(string CategoryName)
+        public Task()
+        {
+           
+        }
+        public Task(string CategoryName)
         {
             Task_Catergory = new Category(CategoryName);
         }

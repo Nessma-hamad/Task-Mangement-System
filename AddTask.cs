@@ -96,22 +96,23 @@ namespace Project
                     category.Tasks.Add(NewTask);
                 }
             }
-            if(TaskCategory==string.Empty)
-            {
-                MessageBox.Show("Please select Catergory ..");
-            }
-            if (Task_Name.Text == string.Empty)
-            {
-                MessageBox.Show("Please Enter Task Name ..");
-            }
-            if (Task_Dateline.Value == null)
-            {
-                MessageBox.Show("Please Set A Dateline for Your Task ..");
-            }
-            if (Task_Pirority.SelectedItem == null)
-            {
-                MessageBox.Show("Please Set A Pirority for Your Task ..");
-            }
+            //if(TaskCategory==string.Empty)
+            //{
+            //    MessageBox.Show("Please select Catergory ..");
+            //}
+            //if (Task_Name.Text == string.Empty)
+            //{
+            //    MessageBox.Show("Please Enter Task Name ..");
+            //}
+            //if (Task_Dateline.Value == null)
+            //{
+            //    MessageBox.Show("Please Set A Dateline for Your Task ..");
+            //}
+            //if (Task_Pirority.SelectedItem == null)
+            //{
+            //    MessageBox.Show("Please Set A Pirority for Your Task ..");
+            //}
+
             this.Close();
         }
 
