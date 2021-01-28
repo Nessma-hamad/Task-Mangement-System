@@ -77,8 +77,9 @@ namespace Project
 
                 }
 
-                Task_Category.SelectedItem=Currenttask.Task_Catergory.Name;
-                Task_Pirority.SelectedItem=Currenttask.pirority.ToString();
+                Task_Category.SelectedItem=Currenttask.Task_Catergory.Name.ToString();
+                Task_Pirority.SelectedItem=Currenttask.pirority;
+                Task_Name.Text = task_name;
             }
             else if(Currenttask==null)
             {
