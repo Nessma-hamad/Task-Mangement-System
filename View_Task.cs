@@ -108,7 +108,7 @@ namespace Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AddTask addtask = new AddTask(task_name);
+            AddTask addtask = new AddTask(currentteam_name,task_name);
             addtask.Show();
         }
     }

@@ -13,6 +13,8 @@ namespace Project
     public partial class AddTask : Form
     {
         string currentteam_name = string.Empty;
+        string task_name = string.Empty;
+
         static Team GetCurrentTeam(string name)
         {
             Team Currentteam = new Team();
@@ -26,34 +28,68 @@ namespace Project
             return Currentteam;
 
         }
+        public AddTask(string teamname, string taskname)
+        {
+            InitializeComponent();
+            currentteam_name = teamname;
+            task_name = taskname;
+
+
+        }
         public AddTask(string teamname)
         {
             InitializeComponent();
             currentteam_name = teamname;
+            
+
 
         }
 
         private void AddTask_Load(object sender, EventArgs e)
         {
-
             Team Currentteam = GetCurrentTeam(currentteam_name);
 
-            foreach(User user in Currentteam.users)
-            {
-                currentteam_users.Items.Add(user.Name);
-                
-            }
-
+            Task Currenttask = null;
             foreach (Category category in Currentteam.categories)
             {
                 Task_Category.Items.Add(category.Name);
 
             }
 
-            
+
             Task_Pirority.Items.Add(Pirority.high);
             Task_Pirority.Items.Add(Pirority.meduim);
             Task_Pirority.Items.Add(Pirority.low);
+
+           
+            foreach (Task task in Currentteam.TeamTasks)
+            {
+                if (task.Name == task_name)
+                {
+                    Currenttask = task;
+                }
+            }
+            if(Currenttask!=null)
+            {
+                foreach (User user in Currenttask.Team_Users)
+                {
+                    currentteam_users.Items.Add(user.Name);
+
+                }
+
+                Task_Category.SelectedItem=Currenttask.Task_Catergory.Name;
+                Task_Pirority.SelectedItem=Currenttask.pirority.ToString();
+            }
+            else if(Currenttask==null)
+            {
+                foreach (User user in Currentteam.users)
+                {
+                    currentteam_users.Items.Add(user.Name);
+
+                }
+
+
+            }
 
 
 
