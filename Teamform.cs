@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project
-{
+{ 
     public partial class Teamform : Form
     {
-        static Team GetCurrentTeam(string name)
+        private Team checkExistingTeam(string name)
         {
             Team Currentteam = new Team();
             foreach (Team team in SampleData.Teams)
@@ -22,15 +22,39 @@ namespace Project
                     Currentteam = team;
                 }
             }
-            return Currentteam;
+             return Currentteam;
 
         }
+        private Team GetCurrentTeam(String Teamname)
+        {
+            Team t = checkExistingTeam(Teamname);
+            if (string.IsNullOrEmpty(t.Name))
+            {
+                SampleData.Teams.Add(new Team(Teamname));
+                t= checkExistingTeam(Teamname);
+            }
+            return t;
+
+        }
+
         public Teamform(string TName)
         {
             InitializeComponent();
             TeamName.Text = TName;
             CategoryForm.newCtegory += AddCategory;
             
+        }
+        private void FillCategoryList()
+        {
+            Team current = GetCurrentTeam(TeamName.Text);
+                    foreach (Category i in current.categories)
+                    {
+                        categoryList.DataSource = null;
+                        categoryList.DisplayMember = nameof(i.Name);
+                        categoryList.DataSource = current.categories;
+                    }
+               
+
         }
         private void fillListOfTask(IEnumerable<Task> Tasks)
         {
@@ -90,19 +114,7 @@ namespace Project
 
         private void Teamform_Load(object sender, EventArgs e)
         {
-            foreach (var item in SampleData.Teams)
-            {
-                if (item.Name == TeamName.Text)
-                {
-                    foreach (Category i in item.categories)
-                    {
-                        categoryList.DataSource = null;
-                        categoryList.DisplayMember = nameof(i.Name);
-                        categoryList.DataSource = item.categories;
-                    }
-                }
-
-            }
+            FillCategoryList();
             DisplayTeamUsers();
         }
         private void categoryList_SelectedIndexChanged(object sender, EventArgs e)
