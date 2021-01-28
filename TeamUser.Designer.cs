@@ -48,7 +48,7 @@ namespace Project
             this.panel1.Controls.Add(this.UserImage);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(481, 86);
+            this.panel1.Size = new System.Drawing.Size(394, 70);
             this.panel1.TabIndex = 0;
             // 
             // RmoveTeamUserBtn
@@ -57,9 +57,9 @@ namespace Project
             this.RmoveTeamUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RmoveTeamUserBtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RmoveTeamUserBtn.ForeColor = System.Drawing.Color.White;
-            this.RmoveTeamUserBtn.Location = new System.Drawing.Point(359, 29);
+            this.RmoveTeamUserBtn.Location = new System.Drawing.Point(291, 23);
             this.RmoveTeamUserBtn.Name = "RmoveTeamUserBtn";
-            this.RmoveTeamUserBtn.Size = new System.Drawing.Size(96, 35);
+            this.RmoveTeamUserBtn.Size = new System.Drawing.Size(90, 30);
             this.RmoveTeamUserBtn.TabIndex = 3;
             this.RmoveTeamUserBtn.Text = "Remove";
             this.RmoveTeamUserBtn.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@ namespace Project
             this.UserImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.UserImage.Location = new System.Drawing.Point(3, 3);
             this.UserImage.Name = "UserImage";
-            this.UserImage.Size = new System.Drawing.Size(86, 76);
+            this.UserImage.Size = new System.Drawing.Size(86, 64);
             this.UserImage.TabIndex = 0;
             this.UserImage.TabStop = false;
             // 
@@ -100,7 +100,7 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "TeamUser";
-            this.Size = new System.Drawing.Size(486, 92);
+            this.Size = new System.Drawing.Size(400, 75);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserImage)).EndInit();
