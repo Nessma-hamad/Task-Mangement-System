@@ -56,12 +56,12 @@ namespace Project
                
 
         }
-        private void fillListOfTask(IEnumerable<Task> Tasks)
+        private void fillListOfTask(List<Task> Tasks)
         {
             checkedListBox_Tasks.Items.Clear();
             foreach (Task task in Tasks)
             {
-                checkedListBox_Tasks.Items.Add(task.Name);
+                checkedListBox_Tasks.Items.Add(task);
                 
             }
         }
@@ -75,9 +75,30 @@ namespace Project
                 y += 70;
             }
         }
-        private void AddDoneTakToArchive()
+        private void AddDoneTakToArchive(Task task)
         {
-
+            Archive Archive = new Archive() { DoneTasks = new List<Task>() };
+            Team current = GetCurrentTeam(TeamName.Text);
+            foreach (Category c in current.categories)
+            {
+                if (c.Name == cName.Text)
+                {
+                    foreach (Task t in c.Tasks)
+                    {
+                        if (t.Name == task.Name)
+                        {
+                            t.IsDone = true;
+                            Archive.DoneTasks.Add(t);
+                            current.archive = Archive;
+                            ListViewItem item = new ListViewItem(task.Name);
+                            item.SubItems.Add(t.pirority.ToString());
+                            item.SubItems.Add(t.DateLine.ToString());
+                            item.SubItems.Add(cName.Text);
+                            listView1.Items.Add(item);
+                        }
+                    }
+                }
+            }
         }
         private void TeamformClose_Click(object sender, EventArgs e)
         {
@@ -172,6 +193,14 @@ namespace Project
                 
 
                 current.TeamTasks.Remove(team_task);
+            }
+        }
+
+        private void checkedListBox_Tasks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Task itemChecked in checkedListBox_Tasks.CheckedItems)
+            {
+                AddDoneTakToArchive(itemChecked);
             }
         }
     }

@@ -8,6 +8,6 @@ namespace Project
 {
     class Archive
     {
-        List<Task> DoneTasks = new List<Task>();
+       public List<Task> DoneTasks = new List<Task>();
     }
 }

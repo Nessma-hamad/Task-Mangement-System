@@ -140,6 +140,7 @@ namespace Project
             this.checkedListBox_Tasks.Name = "checkedListBox_Tasks";
             this.checkedListBox_Tasks.Size = new System.Drawing.Size(340, 200);
             this.checkedListBox_Tasks.TabIndex = 2;
+            this.checkedListBox_Tasks.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_Tasks_SelectedIndexChanged);
             // 
             // contextMenuStrip1
             // 
@@ -154,13 +155,13 @@ namespace Project
             // 
             this.showToolStripMenuItem.CheckOnClick = true;
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.showToolStripMenuItem.Text = "show";
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.removeToolStripMenuItem.Text = "Remove";
             // 
             // panel2

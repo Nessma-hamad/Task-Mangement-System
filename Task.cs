@@ -36,7 +36,7 @@ namespace Project
         }
         public override string ToString()
         {
-            return $"Name : {Name} \t isDone :{IsDone} \t DateLine : {DateLine} \t pirority :{pirority}";
+            return Name;
         }
     }
 }
