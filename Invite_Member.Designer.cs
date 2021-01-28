@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.users = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.selectusers = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -43,15 +43,6 @@
             this.label1.Size = new System.Drawing.Size(162, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Invite Member";
-            // 
-            // users
-            // 
-            this.users.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.users.FormattingEnabled = true;
-            this.users.Location = new System.Drawing.Point(27, 124);
-            this.users.Name = "users";
-            this.users.Size = new System.Drawing.Size(192, 244);
-            this.users.TabIndex = 3;
             // 
             // label2
             // 
@@ -74,14 +65,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // selectusers
+            // 
+            this.selectusers.FormattingEnabled = true;
+            this.selectusers.Location = new System.Drawing.Point(27, 118);
+            this.selectusers.Name = "selectusers";
+            this.selectusers.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.selectusers.Size = new System.Drawing.Size(157, 225);
+            this.selectusers.TabIndex = 6;
+            // 
             // Invite_Member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 418);
+            this.Controls.Add(this.selectusers);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.users);
             this.Controls.Add(this.label1);
             this.Name = "Invite_Member";
             this.Text = "Invite_Member";
@@ -94,8 +94,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox users;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox selectusers;
     }
 }

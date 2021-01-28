@@ -27,23 +27,24 @@ namespace Project
             return Currentteam;
 
         }
-        public Invite_Member()
+        public Invite_Member(string teamname)
         {
             InitializeComponent();
+            currentteam_name = teamname;
         }
 
         private void Invite_Member_Load(object sender, EventArgs e)
         {
             foreach (User user in Users)
             {
-                users.Items.Add(user.Name);
+                selectusers.Items.Add(user.Name);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Team Currentteam = GetCurrentTeam(currentteam_name);
-            foreach(string username in users.SelectedItems)
+            foreach(string username in selectusers.SelectedItems)
             {
                 foreach (User user in Users)
                 {
@@ -57,6 +58,7 @@ namespace Project
                
 
             }
+            this.Close();
         }
     }
 }

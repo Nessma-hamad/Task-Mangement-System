@@ -97,7 +97,7 @@ namespace Project
 
         private void AddMemberBtn_Click(object sender, EventArgs e)
         {
-            Invite_Member invite = new Invite_Member();
+            Invite_Member invite = new Invite_Member(TeamName.Text);
             invite.Show();
         }
         public void AddCategory(string name)
