@@ -76,6 +76,24 @@ namespace Project
                 
             }
         }
+        private void LoadTo_Archive()
+        {
+            Team team = GetCurrentTeam(TeamName.Text);
+            foreach(Category c in team.categories)
+            {
+                foreach(Task t in c.Tasks)
+                {
+                   if(t.IsDone==true)
+                    {
+                        ListViewItem item = new ListViewItem(t.Name);
+                        item.SubItems.Add(t.pirority.ToString());
+                        item.SubItems.Add(t.DateLine.ToString());
+                        item.SubItems.Add(c.Name);
+                        listView1.Items.Add(item);
+                    }
+                }
+            }
+        }
         private void DisplayTeamUsers()
         {
             Team team = GetCurrentTeam(TeamName.Text);
@@ -167,6 +185,7 @@ namespace Project
         {
             FillCategoryList();
             DisplayTeamUsers();
+            LoadTo_Archive();
         }
         private void categoryList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -229,10 +248,25 @@ namespace Project
             foreach (Task itemChecked in checkedListBox_Tasks.CheckedItems)
             {
                 AddDoneTakToArchive(itemChecked);
-                //checkedListBox_Tasks.Items.Remove(itemChecked);
             }
-           
+            int count = checkedListBox_Tasks.Items.Count;
 
+            for (int index = count; index > 0; index--)
+
+            {
+                if (checkedListBox_Tasks.CheckedItems.Contains(checkedListBox_Tasks.Items[index - 1]))
+                {
+                    checkedListBox_Tasks.Items.RemoveAt(index - 1);
+                }
+
+            }
+
+        }
+
+        private void checkedListBox_Tasks_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+
+           
         }
     }
 }

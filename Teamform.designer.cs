@@ -140,6 +140,7 @@ namespace Project
             this.checkedListBox_Tasks.Name = "checkedListBox_Tasks";
             this.checkedListBox_Tasks.Size = new System.Drawing.Size(340, 200);
             this.checkedListBox_Tasks.TabIndex = 2;
+            this.checkedListBox_Tasks.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox_Tasks_ItemCheck);
             this.checkedListBox_Tasks.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_Tasks_SelectedIndexChanged);
             // 
             // contextMenuStrip1
