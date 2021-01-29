@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Project
 {
+    public delegate void AddUserTo_Team();
     public partial class Invite_Member : Form
     {
+        public static event AddUserTo_Team MyEvent;
         List<User> Users = SampleData.Users;
         string currentteam_name = string.Empty;
         static Team GetCurrentTeam(string name)
@@ -51,6 +53,8 @@ namespace Project
                     if(user.Name==username)
                     {
                         Currentteam.users.Add(user);
+                        if (MyEvent != null)
+                            MyEvent();
                     }
 
                 }

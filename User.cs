@@ -14,7 +14,7 @@ namespace Project
         
         public string Picture { set; get; }
         public User() { }
-        public User(  string name, string email, string password, string picture)
+        public User(  string name, string email, string picture)
         {
            
             Name = name;

@@ -36,12 +36,12 @@ namespace Project
             return t;
 
         }
-
         public Teamform(string TName)
         {
             InitializeComponent();
             TeamName.Text = TName;
             CategoryForm.newCtegory += AddCategory;
+            Invite_Member.MyEvent += DisplayTeamUsers;
             TeamUser.RemoveUser += new EventHandler( RemoveUserFromTeam);
             
         }
@@ -58,8 +58,11 @@ namespace Project
         private void RemoveUserFromTeam(object sender,EventArgs e) {
             Team current = GetCurrentTeam(TeamName.Text);
             TeamUser UC = (TeamUser)sender;
-            User user = new User() { Name = UC.UserName };
-            current.users.Remove(user);
+            foreach(User u in current.users)
+            {
+                if(u.Name==UC.Name)
+                current.users.Remove(u);
+            }
             MemberTab_panel.Controls.Remove(UC);
             UC.Dispose();
         }
@@ -68,6 +71,7 @@ namespace Project
             checkedListBox_Tasks.Items.Clear();
             foreach (Task task in Tasks)
             {
+                if(task.IsDone==false)
                 checkedListBox_Tasks.Items.Add(task);
                 
             }
@@ -225,8 +229,10 @@ namespace Project
             foreach (Task itemChecked in checkedListBox_Tasks.CheckedItems)
             {
                 AddDoneTakToArchive(itemChecked);
-                checkedListBox_Tasks.Items.Remove(itemChecked);
+                //checkedListBox_Tasks.Items.Remove(itemChecked);
             }
+           
+
         }
     }
 }
