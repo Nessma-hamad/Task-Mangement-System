@@ -42,6 +42,7 @@ namespace Project
             InitializeComponent();
             TeamName.Text = TName;
             CategoryForm.newCtegory += AddCategory;
+            TeamUser.RemoveUser += new EventHandler( RemoveUserFromTeam);
             
         }
         private void FillCategoryList()
@@ -53,8 +54,14 @@ namespace Project
                         categoryList.DisplayMember = nameof(i.Name);
                         categoryList.DataSource = current.categories;
                     }
-               
-
+        }
+        private void RemoveUserFromTeam(object sender,EventArgs e) {
+            Team current = GetCurrentTeam(TeamName.Text);
+            TeamUser UC = (TeamUser)sender;
+            User user = new User() { Name = UC.UserName };
+            current.users.Remove(user);
+            MemberTab_panel.Controls.Remove(UC);
+            UC.Dispose();
         }
         private void fillListOfTask(List<Task> Tasks)
         {
@@ -67,12 +74,10 @@ namespace Project
         }
         private void DisplayTeamUsers()
         {
-            int y = 0;
             Team team = GetCurrentTeam(TeamName.Text);
             foreach (User u in team.users)
             {
-                MemberTab_panel.Controls.Add(new TeamUser() { UserName = u.Name, Email = u.Email, Location = new Point(0, y)});
-                y += 70;
+                MemberTab_panel.Controls.Add(new TeamUser() { UserName = u.Name, Email = u.Email});
             }
         }
         private void AddDoneTakToArchive(Task task)
@@ -123,16 +128,35 @@ namespace Project
             Invite_Member invite = new Invite_Member(TeamName.Text);
             invite.Show();
         }
+       private bool CheckifCategoryExist(string name)
+        {
+            bool result = false;
+            Team t = GetCurrentTeam(TeamName.Text);
+            foreach (Category c in t.categories)
+            {
+                if (c.Name == name)
+                    result = true;
+            }
+            return result;
+        }
         public void AddCategory(string name)
         {
-            Team Currentteam = GetCurrentTeam(TeamName.Text);
-            Currentteam.categories.Add(new Category(name));
-            categoryList.DataSource = null;
-            foreach (Category c in Currentteam.categories)
+              Team Currentteam = GetCurrentTeam(TeamName.Text);
+            if(CheckifCategoryExist(name))
             {
-                categoryList.DisplayMember = nameof(c.Name);
-                categoryList.DataSource = Currentteam.categories;
+                MessageBox.Show("Exist");
             }
+            else
+            {
+                Currentteam.categories.Add(new Category(name));
+                categoryList.DataSource = null;
+                foreach (Category c in Currentteam.categories)
+                {
+                    categoryList.DisplayMember = nameof(c.Name);
+                    categoryList.DataSource = Currentteam.categories;
+                }
+            }
+                   
         }
 
         private void Teamform_Load(object sender, EventArgs e)
@@ -201,6 +225,7 @@ namespace Project
             foreach (Task itemChecked in checkedListBox_Tasks.CheckedItems)
             {
                 AddDoneTakToArchive(itemChecked);
+                checkedListBox_Tasks.Items.Remove(itemChecked);
             }
         }
     }

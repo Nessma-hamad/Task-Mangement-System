@@ -45,7 +45,6 @@ namespace Project
             this.AddTaskBtn = new System.Windows.Forms.Button();
             this.openAdditionformCategory = new System.Windows.Forms.Button();
             this.MembersTab = new System.Windows.Forms.TabPage();
-            this.MemberTab_panel = new System.Windows.Forms.Panel();
             this.AddMemberBtn = new System.Windows.Forms.Button();
             this.ArchiveTab = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -54,6 +53,7 @@ namespace Project
             this.DeadlineHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TaskCategoryColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DescriptionTeam = new System.Windows.Forms.Label();
+            this.MemberTab_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.TeamTabs.SuspendLayout();
             this.CategoryTab.SuspendLayout();
             this.CategoriesPanel.SuspendLayout();
@@ -243,14 +243,6 @@ namespace Project
             this.MembersTab.UseVisualStyleBackColor = true;
             this.MembersTab.Click += new System.EventHandler(this.MembersTab_Click);
             // 
-            // MemberTab_panel
-            // 
-            this.MemberTab_panel.AutoScroll = true;
-            this.MemberTab_panel.Location = new System.Drawing.Point(7, 14);
-            this.MemberTab_panel.Name = "MemberTab_panel";
-            this.MemberTab_panel.Size = new System.Drawing.Size(859, 299);
-            this.MemberTab_panel.TabIndex = 1;
-            // 
             // AddMemberBtn
             // 
             this.AddMemberBtn.AutoEllipsis = true;
@@ -323,6 +315,14 @@ namespace Project
             this.DescriptionTeam.TabIndex = 3;
             this.DescriptionTeam.Text = "label1";
             // 
+            // MemberTab_panel
+            // 
+            this.MemberTab_panel.AutoScroll = true;
+            this.MemberTab_panel.Location = new System.Drawing.Point(17, 14);
+            this.MemberTab_panel.Name = "MemberTab_panel";
+            this.MemberTab_panel.Size = new System.Drawing.Size(840, 299);
+            this.MemberTab_panel.TabIndex = 1;
+            // 
             // Teamform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -366,7 +366,6 @@ namespace Project
         private System.Windows.Forms.Button AddMemberBtn;
         private System.Windows.Forms.TabPage ArchiveTab;
         private System.Windows.Forms.Panel CategoriesPanel;
-        private System.Windows.Forms.Panel MemberTab_panel;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
@@ -380,6 +379,7 @@ namespace Project
         private System.Windows.Forms.ColumnHeader DeadlineHeader;
         private System.Windows.Forms.ColumnHeader TaskCategoryColumn;
         private System.Windows.Forms.CheckedListBox checkedListBox_Tasks;
+        private System.Windows.Forms.FlowLayoutPanel MemberTab_panel;
     }
 }
 

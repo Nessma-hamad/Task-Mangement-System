@@ -63,6 +63,7 @@ namespace Project
             this.RmoveTeamUserBtn.TabIndex = 3;
             this.RmoveTeamUserBtn.Text = "Remove";
             this.RmoveTeamUserBtn.UseVisualStyleBackColor = false;
+            this.RmoveTeamUserBtn.Click += new System.EventHandler(this.RmoveTeamUserBtn_Click);
             // 
             // userEmail
             // 

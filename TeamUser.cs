@@ -12,6 +12,7 @@ namespace Project
 {
     public partial class TeamUser : UserControl
     {
+        public static event EventHandler RemoveUser;
         public TeamUser()
         {
             InitializeComponent();
@@ -50,5 +51,9 @@ namespace Project
             }
         }
 
+        private void RmoveTeamUserBtn_Click(object sender, EventArgs e)
+        {
+            RemoveUser(this, e);
+        }
     }
 }
