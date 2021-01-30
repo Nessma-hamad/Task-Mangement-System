@@ -33,11 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Add_NewTeam = new System.Windows.Forms.Button();
             this.Users_tab = new System.Windows.Forms.TabPage();
-            this.ADD_Users = new System.Windows.Forms.Button();
-            this.noOfUser = new System.Windows.Forms.Label();
             this.lvData = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.noOfUser = new System.Windows.Forms.Label();
+            this.ADD_Users = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
             this.Team_Tab.SuspendLayout();
             this.Users_tab.SuspendLayout();
@@ -48,14 +48,15 @@
             this.TabControl.Controls.Add(this.Team_Tab);
             this.TabControl.Controls.Add(this.Users_tab);
             this.TabControl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TabControl.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabControl.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabControl.ItemSize = new System.Drawing.Size(2000, 75);
-            this.TabControl.Location = new System.Drawing.Point(-2, -1);
+            this.TabControl.Location = new System.Drawing.Point(0, 0);
             this.TabControl.Name = "TabControl";
             this.TabControl.Padding = new System.Drawing.Point(40, 15);
             this.TabControl.SelectedIndex = 0;
             this.TabControl.ShowToolTips = true;
-            this.TabControl.Size = new System.Drawing.Size(885, 540);
+            this.TabControl.Size = new System.Drawing.Size(878, 531);
             this.TabControl.TabIndex = 0;
             // 
             // Team_Tab
@@ -67,7 +68,7 @@
             this.Team_Tab.Location = new System.Drawing.Point(4, 79);
             this.Team_Tab.Name = "Team_Tab";
             this.Team_Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Team_Tab.Size = new System.Drawing.Size(877, 457);
+            this.Team_Tab.Size = new System.Drawing.Size(870, 448);
             this.Team_Tab.TabIndex = 0;
             this.Team_Tab.Text = "Teams";
             this.Team_Tab.UseVisualStyleBackColor = true;
@@ -76,18 +77,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(46, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 33);
+            this.label1.Size = new System.Drawing.Size(95, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Teams";
             // 
             // Add_NewTeam
             // 
-            this.Add_NewTeam.Location = new System.Drawing.Point(564, 374);
+            this.Add_NewTeam.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_NewTeam.Location = new System.Drawing.Point(674, 374);
             this.Add_NewTeam.Name = "Add_NewTeam";
-            this.Add_NewTeam.Size = new System.Drawing.Size(290, 67);
+            this.Add_NewTeam.Size = new System.Drawing.Size(180, 67);
             this.Add_NewTeam.TabIndex = 0;
             this.Add_NewTeam.Text = "+ New Team";
             this.Add_NewTeam.UseVisualStyleBackColor = true;
@@ -102,37 +104,17 @@
             this.Users_tab.Location = new System.Drawing.Point(4, 79);
             this.Users_tab.Name = "Users_tab";
             this.Users_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Users_tab.Size = new System.Drawing.Size(877, 457);
+            this.Users_tab.Size = new System.Drawing.Size(870, 448);
             this.Users_tab.TabIndex = 1;
             this.Users_tab.Text = "Users";
             this.Users_tab.UseVisualStyleBackColor = true;
-            // 
-            // ADD_Users
-            // 
-            this.ADD_Users.Location = new System.Drawing.Point(610, 367);
-            this.ADD_Users.Name = "ADD_Users";
-            this.ADD_Users.Size = new System.Drawing.Size(261, 74);
-            this.ADD_Users.TabIndex = 0;
-            this.ADD_Users.Text = "Add Users";
-            this.ADD_Users.UseVisualStyleBackColor = true;
-            this.ADD_Users.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // noOfUser
-            // 
-            this.noOfUser.AutoSize = true;
-            this.noOfUser.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noOfUser.Location = new System.Drawing.Point(26, 19);
-            this.noOfUser.Name = "noOfUser";
-            this.noOfUser.Size = new System.Drawing.Size(422, 35);
-            this.noOfUser.TabIndex = 1;
-            this.noOfUser.Text = "Click in button to Add Users";
             // 
             // lvData
             // 
             this.lvData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.lvData.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvData.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvData.Location = new System.Drawing.Point(10, 93);
             this.lvData.Name = "lvData";
             this.lvData.Size = new System.Drawing.Size(560, 348);
@@ -150,6 +132,26 @@
             // 
             this.columnHeader2.Text = "Email";
             this.columnHeader2.Width = 237;
+            // 
+            // noOfUser
+            // 
+            this.noOfUser.AutoSize = true;
+            this.noOfUser.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noOfUser.Location = new System.Drawing.Point(26, 19);
+            this.noOfUser.Name = "noOfUser";
+            this.noOfUser.Size = new System.Drawing.Size(273, 24);
+            this.noOfUser.TabIndex = 1;
+            this.noOfUser.Text = "Click in button to Add Users";
+            // 
+            // ADD_Users
+            // 
+            this.ADD_Users.Location = new System.Drawing.Point(669, 347);
+            this.ADD_Users.Name = "ADD_Users";
+            this.ADD_Users.Size = new System.Drawing.Size(176, 74);
+            this.ADD_Users.TabIndex = 0;
+            this.ADD_Users.Text = "Add Users";
+            this.ADD_Users.UseVisualStyleBackColor = true;
+            this.ADD_Users.Click += new System.EventHandler(this.button2_Click);
             // 
             // basic
             // 

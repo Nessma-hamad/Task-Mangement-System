@@ -54,7 +54,7 @@
             // 
             // AddUserbtn
             // 
-            this.AddUserbtn.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddUserbtn.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddUserbtn.Location = new System.Drawing.Point(626, 402);
             this.AddUserbtn.Name = "AddUserbtn";
             this.AddUserbtn.Size = new System.Drawing.Size(192, 60);
@@ -65,16 +65,16 @@
             // 
             // txtboxEmail
             // 
-            this.txtboxEmail.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxEmail.Location = new System.Drawing.Point(255, 123);
+            this.txtboxEmail.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxEmail.Location = new System.Drawing.Point(245, 121);
             this.txtboxEmail.Name = "txtboxEmail";
-            this.txtboxEmail.Size = new System.Drawing.Size(424, 40);
+            this.txtboxEmail.Size = new System.Drawing.Size(424, 33);
             this.txtboxEmail.TabIndex = 11;
             this.txtboxEmail.TextChanged += new System.EventHandler(this.txtboxEmail_TextChanged);
             // 
             // txtboxName
             // 
-            this.txtboxName.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxName.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtboxName.Location = new System.Drawing.Point(245, 29);
             this.txtboxName.Multiline = true;
             this.txtboxName.Name = "txtboxName";
@@ -84,42 +84,42 @@
             // pic_label
             // 
             this.pic_label.AutoSize = true;
-            this.pic_label.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pic_label.Location = new System.Drawing.Point(53, 271);
+            this.pic_label.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pic_label.Location = new System.Drawing.Point(42, 271);
             this.pic_label.Name = "pic_label";
-            this.pic_label.Size = new System.Drawing.Size(163, 33);
+            this.pic_label.Size = new System.Drawing.Size(156, 24);
             this.pic_label.TabIndex = 9;
-            this.pic_label.Text = "AddPicture";
+            this.pic_label.Text = "AddPicture :";
             // 
             // Email_label
             // 
             this.Email_label.AutoSize = true;
-            this.Email_label.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email_label.Location = new System.Drawing.Point(53, 130);
+            this.Email_label.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email_label.Location = new System.Drawing.Point(107, 126);
             this.Email_label.Name = "Email_label";
-            this.Email_label.Size = new System.Drawing.Size(100, 33);
+            this.Email_label.Size = new System.Drawing.Size(89, 24);
             this.Email_label.TabIndex = 8;
-            this.Email_label.Text = "Email:";
+            this.Email_label.Text = "Email :";
             // 
             // UserNameLabel
             // 
             this.UserNameLabel.AutoSize = true;
-            this.UserNameLabel.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.Location = new System.Drawing.Point(30, 32);
+            this.UserNameLabel.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameLabel.Location = new System.Drawing.Point(53, 34);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(164, 33);
+            this.UserNameLabel.Size = new System.Drawing.Size(145, 24);
             this.UserNameLabel.TabIndex = 7;
-            this.UserNameLabel.Text = " UserName";
+            this.UserNameLabel.Text = " UserName :";
             this.UserNameLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblNameVaildation
             // 
             this.lblNameVaildation.AutoSize = true;
-            this.lblNameVaildation.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameVaildation.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameVaildation.ForeColor = System.Drawing.Color.Red;
             this.lblNameVaildation.Location = new System.Drawing.Point(240, 84);
             this.lblNameVaildation.Name = "lblNameVaildation";
-            this.lblNameVaildation.Size = new System.Drawing.Size(450, 29);
+            this.lblNameVaildation.Size = new System.Drawing.Size(314, 23);
             this.lblNameVaildation.TabIndex = 14;
             this.lblNameVaildation.Text = "Name must Contain at least 4 letters";
             this.lblNameVaildation.Visible = false;
@@ -127,11 +127,11 @@
             // lblEmailValidation
             // 
             this.lblEmailValidation.AutoSize = true;
-            this.lblEmailValidation.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailValidation.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailValidation.ForeColor = System.Drawing.Color.Red;
             this.lblEmailValidation.Location = new System.Drawing.Point(325, 176);
             this.lblEmailValidation.Name = "lblEmailValidation";
-            this.lblEmailValidation.Size = new System.Drawing.Size(170, 29);
+            this.lblEmailValidation.Size = new System.Drawing.Size(117, 23);
             this.lblEmailValidation.TabIndex = 15;
             this.lblEmailValidation.Text = "Invaild Email";
             this.lblEmailValidation.Visible = false;
