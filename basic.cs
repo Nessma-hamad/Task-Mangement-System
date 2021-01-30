@@ -44,6 +44,14 @@ namespace Project
 
 
 
+        private void adduser(string nameOFuser, string emailofuser, string filepath)
+        {
+            ListViewItem items = lvData.Items.Add(nameOFuser);
+            items.SubItems.Add(emailofuser);
+            int numberOfUser = lvData.Items.Count;
+            noOfUser.Text = "No Of Users " + numberOfUser.ToString();
+            lvData.Visible = true;
+        }
         private void adduser(string nameOFuser, string emailofuser)
         {
             ListViewItem items = lvData.Items.Add(nameOFuser);
