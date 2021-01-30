@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -61,6 +62,10 @@ namespace Project
             foreach (Comment comment in Currenttask.Comments)
             {
                 T_comments.Items.Add(comment.CommentContent);
+            }
+            foreach(string attachment in Currenttask.Task_Attachments)
+            {
+                T_attachments.Items.Add(System.IO.Path.GetFileNameWithoutExtension(attachment));
             }
 
         }
@@ -148,10 +153,31 @@ namespace Project
             {
                 if(T_attachments.SelectedItem.ToString() == System.IO.Path.GetFileNameWithoutExtension(filepath))
                 {
-                    FileStream fs = File.Open(filepath, FileMode.Open);
+                    //FileStream fs = File.Open(filepath, FileMode.Open, FileAccess.Write, FileShare.None);
+                    string fileExt =System.IO.Path.GetExtension(filepath);
 
-                    
+                    if(fileExt == ".txt")
+                    {
+                        Process.Start("notepad.exe", filepath);
+                    }
+                    if (fileExt == ".ppt")
+                    {
+                        Process.Start("POWERPNT.EXE", filepath);
+                    }
+                    if (fileExt == ".docx")
+                    {
+                        Process.Start("WINWORD.EXE", filepath);
+                    }
+                    if (fileExt == ".pdf")
+                    {
+                        Process.Start("FOXITREADER.EXE", filepath);
+                    }
+                    if (fileExt == ".png" || fileExt == ".jpg")
+                    {
+                        Process.Start("PHOTOES.EXE", filepath);
+                    }
 
+                   
                 }
             }
         }
