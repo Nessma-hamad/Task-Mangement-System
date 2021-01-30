@@ -52,9 +52,16 @@ namespace Project
                 {
                     if(user.Name==username)
                     {
-                        Currentteam.users.Add(user);
-                        if (MyEvent != null)
-                            MyEvent();
+                        foreach(User newuser in Users)
+                        {
+                            if(!Currentteam.users.Contains(newuser))
+                            {
+                                Currentteam.users.Add(user);
+                                if (MyEvent != null)
+                                    MyEvent();
+                            }
+                        }
+                        
                     }
 
                 }

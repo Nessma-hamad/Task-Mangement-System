@@ -97,9 +97,9 @@ namespace Project
         private void DisplayTeamUsers()
         {
             Team team = GetCurrentTeam(TeamName.Text);
-            foreach (User u in team.users)
+            foreach (User user in team.users)
             {
-                MemberTab_panel.Controls.Add(new TeamUser() { UserName = u.Name, Email = u.Email});
+                MemberTab_panel.Controls.Add(new TeamUser() { UserName = user.Name, Email = user.Email});
             }
         }
         private void AddDoneTakToArchive(Task task)
