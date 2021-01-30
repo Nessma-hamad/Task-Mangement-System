@@ -42,7 +42,7 @@ namespace Project
             
             TeamName.Text = TName;
             CategoryForm.newCtegory += AddCategory;
-            Invite_Member.MyEvent += DisplayTeamUsers;
+            Invite_Member.MyEvent += AddUserToMember;
             TeamUser.RemoveUser += new EventHandler( RemoveUserFromTeam);
             
         }
@@ -102,6 +102,10 @@ namespace Project
             {
                 MemberTab_panel.Controls.Add(new TeamUser() { UserName = user.Name, Email = user.Email,userPicture=user.Picture});
             }
+        }
+        private void AddUserToMember(User user)
+        {
+            MemberTab_panel.Controls.Add(new TeamUser() { UserName = user.Name, Email = user.Email, userPicture = user.Picture });
         }
         private void AddDoneTakToArchive(Task task)
         {

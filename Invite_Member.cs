@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public delegate void AddUserTo_Team();
+    public delegate void AddUserTo_Team(User u);
     public partial class Invite_Member : Form
     {
         public static event AddUserTo_Team MyEvent;
@@ -52,15 +52,13 @@ namespace Project
                 {
                     if(user.Name==username)
                     {
-                        foreach(User newuser in Users)
-                        {
-                            if(!Currentteam.users.Contains(newuser))
+                            if(!Currentteam.users.Contains(user))
                             {
                                 Currentteam.users.Add(user);
                                 if (MyEvent != null)
-                                    MyEvent();
+                                    MyEvent(user);
                             }
-                        }
+                       
                         
                     }
 
