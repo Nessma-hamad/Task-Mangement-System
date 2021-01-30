@@ -39,21 +39,47 @@ namespace Project
                 userEmail.Text = value;
             }
         }
-        public Image userPicture
+        public string userPicture
         {
             get
             {
-                return UserImage.Image;
+                return label1.Text;
             }
             set
             {
-                UserImage.Image = value;
+                label1.Text = value;
             }
         }
+        
+
+
+
 
         private void RmoveTeamUserBtn_Click(object sender, EventArgs e)
         {
             RemoveUser(this, e);
+        }
+
+        private void UserImage_Click_1(object sender, EventArgs e)
+        {
+            //UserImage.Image = Image.FromFile(@"C:\Users\Microsoft\Pictures\Screenshots\Screenshot(2)");
+            //string path = Application.StartupPath;
+            //string subfolder = @"\Images\";
+            //string imagefilename = trying.Text;
+            //UserImage.Image = Image.FromFile(path + subfolder + imagefilename);
+            //string path = Application.StartupPath;
+            //string subfolder = @"\Images\";
+            //string imagefilename = "4c85586e2bb246ef6707e6d810039739.jpg";
+            //UserImage.Image = Image.FromFile(path + subfolder + imagefilename);
+            string imagefilename = "";
+            string path = Application.StartupPath;
+            imagefilename = label1.Text;
+            string subfolder = @"\Images\";                
+            UserImage.Image = Image.FromFile(path + subfolder + imagefilename);
+            
+
+            
+
         }
     }
 }

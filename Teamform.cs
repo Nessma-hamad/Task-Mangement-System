@@ -100,7 +100,7 @@ namespace Project
             Team team = GetCurrentTeam(TeamName.Text);
             foreach (User user in team.users)
             {
-                MemberTab_panel.Controls.Add(new TeamUser() { UserName = user.Name, Email = user.Email});
+                MemberTab_panel.Controls.Add(new TeamUser() { UserName = user.Name, Email = user.Email,userPicture=user.Picture});
             }
         }
         private void AddDoneTakToArchive(Task task)
