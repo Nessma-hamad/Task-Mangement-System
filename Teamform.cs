@@ -268,10 +268,13 @@ namespace Project
 
         private void checkedListBox_Tasks_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Task itemChecked in checkedListBox_Tasks.CheckedItems.OfType<Task>().ToList())
+            if (MessageBox.Show("Do you Want Add this Done Task And Archive", "Add To Archive", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                AddDoneTakToArchive(itemChecked);
-                checkedListBox_Tasks.Items.Remove(itemChecked);
+                foreach (Task itemChecked in checkedListBox_Tasks.CheckedItems.OfType<Task>().ToList())
+                {
+                    AddDoneTakToArchive(itemChecked);
+                    checkedListBox_Tasks.Items.Remove(itemChecked);
+                }
             }
 
         }
