@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(createTeamForm));
             this.desc_txtbox = new System.Windows.Forms.TextBox();
             this.NameTeam_txtbox = new System.Windows.Forms.TextBox();
             this.description_label = new System.Windows.Forms.Label();
@@ -95,6 +96,7 @@
             this.Controls.Add(this.NameTeam_txtbox);
             this.Controls.Add(this.description_label);
             this.Controls.Add(this.NameTeam_label);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "createTeamForm";
             this.Text = "Team";
             this.Load += new System.EventHandler(this.Team_Load);

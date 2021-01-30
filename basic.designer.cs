@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(basic));
             this.TabControl = new System.Windows.Forms.TabControl();
             this.Team_Tab = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -160,6 +161,7 @@
             this.ClientSize = new System.Drawing.Size(878, 531);
             this.Controls.Add(this.TabControl);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "basic";
             this.Text = "Team Management System";
             this.Load += new System.EventHandler(this.Form1_Load);
