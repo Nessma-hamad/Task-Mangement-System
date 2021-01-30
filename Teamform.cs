@@ -59,13 +59,17 @@ namespace Project
         private void RemoveUserFromTeam(object sender,EventArgs e) {
             Team current = GetCurrentTeam(TeamName.Text);
             TeamUser UC = (TeamUser)sender;
-            foreach(User u in current.users)
+            foreach(User u in current.users.ToList())
             {
-                if(u.Name==UC.Name)
-                current.users.Remove(u);
+                if(u.Name==UC.UserName)
+                {
+                    current.users.Remove(u);
+                }
+                MemberTab_panel.Controls.Remove(UC);
+                UC.Dispose();
+
             }
-            MemberTab_panel.Controls.Remove(UC);
-            UC.Dispose();
+           
         }
         private void fillListOfTask(List<Task> Tasks)
         {
