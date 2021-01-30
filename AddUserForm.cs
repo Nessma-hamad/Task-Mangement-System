@@ -78,6 +78,7 @@ namespace Project
                 MessageBox.Show("sucess added user");
                 User AddNewUser = new User(txtboxName.Text, txtboxEmail.Text);
                 newuser(AddNewUser.Name, AddNewUser.Email);
+                SampleData.Users.Add(AddNewUser);
                 Controls.Clear();
                 InitializeComponent();
                 this.Hide();
