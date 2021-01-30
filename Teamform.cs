@@ -217,29 +217,43 @@ namespace Project
             }
             else if (e.ClickedItem.ToString() == "Remove")
             {
-                Task team_task= new Task();
-                foreach (Task task in current.TeamTasks)
+                
+                foreach (Task task in current.TeamTasks.ToList())
                 {
-                    //foreach (Category category in current.categories)
-                    //{
-                    //    foreach (Task ctask in category.Tasks)
-                    //    {
-                    //        if (ctask.Name == checkedListBox_Tasks.SelectedItem.ToString())
-                    //        {
-                    //            category.Tasks.Remove(ctask);
-                    //        }
-                    //    }
-                    //}
+                    
                     if (task.Name==checkedListBox_Tasks.SelectedItem.ToString())
                     {
-                        team_task = task;
+                        current.TeamTasks.Remove(task);
+                    }
+                    foreach (Category category in current.categories)
+                    {
+                        if (cName.Text == category.Name)
+                        {
+
+                            foreach (Task ctask in category.Tasks.ToList())
+                            {
+
+                                if (ctask.Name == checkedListBox_Tasks.SelectedItem.ToString())
+                                {
+                                    category.Tasks.Remove(ctask);
+                                    checkedListBox_Tasks.Items.Clear();
+                                    foreach (Task removedtask in category.Tasks.ToList())
+                                    {
+                                        if (task.IsDone == false)
+                                            checkedListBox_Tasks.Items.Add(task);
+
+                                    }
+                                }
+                            }
+                        }
+
                     }
                 }
 
                 
                 
 
-                current.TeamTasks.Remove(team_task);
+               
             }
         }
 

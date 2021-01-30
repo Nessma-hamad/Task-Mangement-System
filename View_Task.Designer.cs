@@ -118,7 +118,7 @@
             this.groupBox1.Controls.Add(this.writecomment);
             this.groupBox1.Controls.Add(this.T_comments);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(39, 516);
+            this.groupBox1.Location = new System.Drawing.Point(39, 491);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(692, 201);
             this.groupBox1.TabIndex = 17;
