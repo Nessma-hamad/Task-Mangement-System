@@ -39,6 +39,7 @@ namespace Project
         public Teamform(string TName)
         {
             InitializeComponent();
+            
             TeamName.Text = TName;
             CategoryForm.newCtegory += AddCategory;
             Invite_Member.MyEvent += DisplayTeamUsers;

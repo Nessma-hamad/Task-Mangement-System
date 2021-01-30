@@ -42,8 +42,7 @@ namespace Project
         {
             Team Add_team = new Team(NameTeam_txtbox.Text, desc_txtbox.Text);
             NewTeam(Add_team.Name, Add_team.Description);
-            //Controls.Clear();
-            //InitializeComponent();
+            
             this.Hide();
             Teamform teamform = new Teamform(this.NameTeam_txtbox.Text);
             teamform.Show();

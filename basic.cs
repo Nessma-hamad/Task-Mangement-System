@@ -23,7 +23,6 @@ namespace Project
         private void addteam(string teamName, string teamDesciption)
         {
             listOfTeams.Add(new Team(teamName, teamDesciption));
-            // MessageBox.Show("tema addes");
             int width = 120;
             int height = 100;
 
@@ -32,7 +31,6 @@ namespace Project
                 Button dynamicTeamBtn = new Button();
                 dynamicTeamBtn.Location = new Point(width, height);
                 dynamicTeamBtn.Text = team.Name;
-                //MessageBox.Show(tt.Name);
                 dynamicTeamBtn.Font = new Font("Georgia", 16);
                 dynamicTeamBtn.Click += new EventHandler(ShowTeam);
                 dynamicTeamBtn.Size = new Size(150, 70);
