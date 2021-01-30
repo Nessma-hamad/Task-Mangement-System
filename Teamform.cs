@@ -268,20 +268,10 @@ namespace Project
 
         private void checkedListBox_Tasks_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Task itemChecked in checkedListBox_Tasks.CheckedItems)
+            foreach (Task itemChecked in checkedListBox_Tasks.CheckedItems.OfType<Task>().ToList())
             {
                 AddDoneTakToArchive(itemChecked);
-            }
-            int count = checkedListBox_Tasks.Items.Count;
-
-            for (int index = count; index > 0; index--)
-
-            {
-                if (checkedListBox_Tasks.CheckedItems.Contains(checkedListBox_Tasks.Items[index - 1]))
-                {
-                    checkedListBox_Tasks.Items.RemoveAt(index - 1);
-                }
-
+                checkedListBox_Tasks.Items.Remove(itemChecked);
             }
 
         }
@@ -289,7 +279,7 @@ namespace Project
         private void checkedListBox_Tasks_ItemCheck(object sender, ItemCheckEventArgs e)
         {
 
-           
+            
         }
     }
 }
