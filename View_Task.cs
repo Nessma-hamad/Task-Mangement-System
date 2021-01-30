@@ -110,6 +110,7 @@ namespace Project
         {
             AddTask addtask = new AddTask(currentteam_name,task_name);
             addtask.Show();
+            Close();
         }
     }
 }

@@ -83,6 +83,8 @@ namespace Project
                 Task_Name.Text = task_name;
                 Task_Dateline.Value = Currenttask.DateLine;
                 created = true;
+               
+
             }
             else if(Currenttask==null)
             {
@@ -106,13 +108,13 @@ namespace Project
             Team Currentteam = GetCurrentTeam(currentteam_name);
             if(created==true)
             {
-                //Task Currenttask = null;
+                Task Currenttask = null;
                 
                 foreach (Task task in Currentteam.TeamTasks)
                 {
                     if (task.Name == task_name)
                     {
-                        //Currenttask = task;
+                        Currenttask = task;
                         task.Name = Task_Name.Text;
                         task.DateLine = Task_Dateline.Value;
                         task.pirority = (Pirority)Task_Pirority.SelectedItem;
@@ -134,7 +136,11 @@ namespace Project
 
                     }
                 }
-                
+                View_Task view = new View_Task(Currentteam.Name, Currenttask.Name);
+                view.Show();
+                Close();
+
+
 
             }
             else
