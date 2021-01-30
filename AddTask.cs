@@ -121,18 +121,18 @@ namespace Project
                         task.Task_Catergory.Name= Task_Category.SelectedItem.ToString();
 
 
+                        
+                        //foreach (string username in currentteam_users.SelectedItems)
+                        //{
+                        //    foreach (User user in Currentteam.users)
+                        //    {
+                        //        if (user.Name == username)
+                        //        {
+                        //            task.Team_Users.Add(user);
+                        //        }
 
-                        foreach (string username in currentteam_users.SelectedItems)
-                        {
-                            foreach (User user in Currentteam.users)
-                            {
-                                if (user.Name == username)
-                                {
-                                    task.Team_Users.Add(user);
-                                }
-
-                            }
-                        }
+                        //    }
+                        //}
 
                     }
                 }

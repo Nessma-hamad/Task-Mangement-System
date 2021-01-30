@@ -41,13 +41,16 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.T_users = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.T_attachments = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.T_Pirority = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // T_Name
@@ -173,7 +176,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.listBox1);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.T_attachments);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(404, 275);
             this.groupBox3.Name = "groupBox3";
@@ -182,14 +186,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Task Attachments  :";
             // 
-            // listBox1
+            // T_attachments
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 19;
-            this.listBox1.Location = new System.Drawing.Point(23, 39);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(290, 137);
-            this.listBox1.TabIndex = 15;
+            this.T_attachments.FormattingEnabled = true;
+            this.T_attachments.ItemHeight = 19;
+            this.T_attachments.Location = new System.Drawing.Point(23, 39);
+            this.T_attachments.Name = "T_attachments";
+            this.T_attachments.Size = new System.Drawing.Size(177, 137);
+            this.T_attachments.TabIndex = 15;
+            this.T_attachments.SelectedIndexChanged += new System.EventHandler(this.T_attachments_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -223,6 +228,22 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Pirority :";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(215, 87);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 38);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "+Attachment";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // View_Task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,6 +268,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,9 +289,11 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox T_users;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox T_attachments;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label T_Pirority;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }

@@ -21,6 +21,7 @@ namespace Project
         public string Attachments { get; set; }
         public bool IsDone { get; set; }
         public Pirority pirority { get; set; }
+        public List<string> Task_Attachments = new List<string>();
 
         public List<User> Team_Users = new List<User>();
         public Category Task_Catergory ;

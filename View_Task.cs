@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -111,6 +112,48 @@ namespace Project
             AddTask addtask = new AddTask(currentteam_name,task_name);
             addtask.Show();
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Team Currentteam = GetCurrentTeam(currentteam_name);
+            Task Currenttask = new Task();
+            foreach (Task task in Currentteam.TeamTasks)
+            {
+                if (task.Name == task_name)
+                {
+                    Currenttask = task;
+                }
+            }
+            OpenFileDialog openFileDialog1=new OpenFileDialog();
+            openFileDialog1.ShowDialog();
+            Currenttask.Task_Attachments.Add(openFileDialog1.FileName);
+            T_attachments.Items.Add(System.IO.Path.GetFileNameWithoutExtension(openFileDialog1.FileName));
+
+            
+        }
+
+        private void T_attachments_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Team Currentteam = GetCurrentTeam(currentteam_name);
+            Task Currenttask = new Task();
+            foreach (Task task in Currentteam.TeamTasks)
+            {
+                if (task.Name == task_name)
+                {
+                    Currenttask = task;
+                }
+            }
+            foreach (string filepath in Currenttask.Task_Attachments)
+            {
+                if(T_attachments.SelectedItem.ToString() == System.IO.Path.GetFileNameWithoutExtension(filepath))
+                {
+                    FileStream fs = File.Open(filepath, FileMode.Open);
+
+                    
+
+                }
+            }
         }
     }
 }
