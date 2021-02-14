@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_Task));
             this.T_Name = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.T_ctaegory = new System.Windows.Forms.Label();
@@ -41,11 +42,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.T_users = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.T_attachments = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.T_Pirority = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -186,6 +187,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Task Attachments  :";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(215, 87);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 38);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "+Attachment";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // T_attachments
             // 
             this.T_attachments.FormattingEnabled = true;
@@ -228,17 +240,6 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Pirority :";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(215, 87);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 38);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "+Attachment";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
@@ -261,6 +262,7 @@
             this.Controls.Add(this.T_ctaegory);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.T_Name);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "View_Task";
             this.Text = "View_Task";
             this.Load += new System.EventHandler(this.View_Task_Load);

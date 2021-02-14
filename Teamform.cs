@@ -42,7 +42,7 @@ namespace Project
             
             TeamName.Text = TName;
             CategoryForm.newCtegory += AddCategory;
-            Invite_Member.MyEvent += DisplayTeamUsers;
+            Invite_Member.MyEvent += AddUserToMember;
             TeamUser.RemoveUser += new EventHandler( RemoveUserFromTeam);
             
         }
@@ -59,13 +59,17 @@ namespace Project
         private void RemoveUserFromTeam(object sender,EventArgs e) {
             Team current = GetCurrentTeam(TeamName.Text);
             TeamUser UC = (TeamUser)sender;
-            foreach(User u in current.users)
+            foreach(User u in current.users.ToList())
             {
-                if(u.Name==UC.Name)
-                current.users.Remove(u);
+                if(u.Name==UC.UserName)
+                {
+                    current.users.Remove(u);
+                }
+                MemberTab_panel.Controls.Remove(UC);
+                UC.Dispose();
+
             }
-            MemberTab_panel.Controls.Remove(UC);
-            UC.Dispose();
+           
         }
         private void fillListOfTask(List<Task> Tasks)
         {
@@ -102,6 +106,10 @@ namespace Project
             {
                 MemberTab_panel.Controls.Add(new TeamUser() { UserName = user.Name, Email = user.Email,userPicture=user.Picture});
             }
+        }
+        private void AddUserToMember(User user)
+        {
+            MemberTab_panel.Controls.Add(new TeamUser() { UserName = user.Name, Email = user.Email, userPicture = user.Picture });
         }
         private void AddDoneTakToArchive(Task task)
         {
@@ -260,20 +268,13 @@ namespace Project
 
         private void checkedListBox_Tasks_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Task itemChecked in checkedListBox_Tasks.CheckedItems)
+            if (MessageBox.Show("Do you Want Add this Done Task And Archive", "Add To Archive", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                AddDoneTakToArchive(itemChecked);
-            }
-            int count = checkedListBox_Tasks.Items.Count;
-
-            for (int index = count; index > 0; index--)
-
-            {
-                if (checkedListBox_Tasks.CheckedItems.Contains(checkedListBox_Tasks.Items[index - 1]))
+                foreach (Task itemChecked in checkedListBox_Tasks.CheckedItems.OfType<Task>().ToList())
                 {
-                    checkedListBox_Tasks.Items.RemoveAt(index - 1);
+                    AddDoneTakToArchive(itemChecked);
+                    checkedListBox_Tasks.Items.Remove(itemChecked);
                 }
-
             }
 
         }
@@ -281,7 +282,7 @@ namespace Project
         private void checkedListBox_Tasks_ItemCheck(object sender, ItemCheckEventArgs e)
         {
 
-           
+            
         }
     }
 }

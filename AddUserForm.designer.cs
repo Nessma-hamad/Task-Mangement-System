@@ -150,6 +150,7 @@
             this.Controls.Add(this.pic_label);
             this.Controls.Add(this.Email_label);
             this.Controls.Add(this.UserNameLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddUserForm";
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);

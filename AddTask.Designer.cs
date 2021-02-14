@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTask));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Task_Name = new System.Windows.Forms.TextBox();
@@ -169,6 +170,7 @@
             this.Controls.Add(this.Task_Name);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddTask";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.AddTask_Load);
